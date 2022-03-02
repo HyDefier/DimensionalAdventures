@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "dimensionaladventures:feather_block"
+    }
+  },
+  "result": {
+    "item": "dimensionaladventures:smooth_feather_block",
+    "count": 1
+  }
+}

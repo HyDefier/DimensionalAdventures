@@ -1,0 +1,11 @@
+{
+  "type": "dimensionaladventures:seramania",
+  "generator": {
+    "type": "dimensionaladventures:seramania_chunkgen",
+    "settings": {
+      "base": 65,
+      "verticalvariance": 2,
+      "horizontalvariance": 8
+    }
+  }
+}

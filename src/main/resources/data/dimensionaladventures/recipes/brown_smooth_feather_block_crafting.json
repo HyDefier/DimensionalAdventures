@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "dimensionaladventures:smooth_feather_block"
+    },
+    {
+      "item": "minecraft:brown_dye"
+    }
+  ],
+  "result": {
+    "item": "dimensionaladventures:brown_smooth_feather_block",
+    "count": 1
+  }
+}

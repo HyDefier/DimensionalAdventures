@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "dimensionaladventures:blocks/red_egg_block"
+  }
+}

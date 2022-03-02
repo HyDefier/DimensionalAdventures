@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "dimensionaladventures:smooth_feather_block"
+    }
+  ],
+  "result": {
+    "item": "dimensionaladventures:feather_block",
+    "count": 4
+  }
+}

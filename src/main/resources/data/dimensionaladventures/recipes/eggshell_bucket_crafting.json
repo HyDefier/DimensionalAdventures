@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "# #",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "dimensionaladventures:broken_eggshell"
+    }
+  },
+  "result": {
+    "item": "dimensionaladventures:eggshell_bucket",
+    "count": 1
+  }
+}

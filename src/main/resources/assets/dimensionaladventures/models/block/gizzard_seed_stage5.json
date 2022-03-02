@@ -1,0 +1,6 @@
+{
+  "parent": "block/crop",
+  "textures": {
+    "crop": "dimensionaladventures:blocks/gizzard_seed_stage5"
+  }
+}

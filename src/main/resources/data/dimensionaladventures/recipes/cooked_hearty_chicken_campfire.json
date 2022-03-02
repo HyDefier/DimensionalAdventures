@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "ingredient": {
+    "item": "dimensionaladventures:hearty_chicken"
+  },
+  "result": "dimensionaladventures:cooked_hearty_chicken",
+  "experience": 0.35,
+  "cookingtime": 600
+}

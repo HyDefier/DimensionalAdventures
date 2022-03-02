@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "dimensionaladventures:gizzard_seeds"
+    }
+  },
+  "result": {
+    "item": "dimensionaladventures:gizzard_seed_block",
+    "count": 1
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "dimensionaladventures:red_egg"
+    }
+  },
+  "result": {
+    "item": "dimensionaladventures:red_egg_block",
+    "count": 1
+  }
+}

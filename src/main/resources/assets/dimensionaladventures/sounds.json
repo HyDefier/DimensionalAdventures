@@ -1,0 +1,20 @@
+{
+  "entity.featherer.ambient": {
+    "sounds":[
+      "dimensionaladventures:featherer_ambient1",
+      "dimensionaladventures:featherer_ambient2",
+      "dimensionaladventures:featherer_ambient3"
+    ]
+  },
+  "entity.featherer.death"  : {
+    "sounds":[
+      "dimensionaladventures:featherer_death1"
+    ]
+  },
+  "entity.featherer.hurt"   : {
+    "sounds":[
+      "dimensionaladventures:featherer_hurt1",
+      "dimensionaladventures:featherer_hurt2"
+    ]
+  }
+}

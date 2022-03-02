@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "dimensionaladventures:eggshell_block"
+    }
+  ],
+  "result": {
+    "item": "dimensionaladventures:broken_eggshell",
+    "count": 9
+  }
+}

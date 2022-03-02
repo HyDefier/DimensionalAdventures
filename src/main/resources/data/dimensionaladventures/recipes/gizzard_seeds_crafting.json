@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "dimensionaladventures:gizzard_seed_block"
+    }
+  ],
+  "result": {
+    "item": "dimensionaladventures:gizzard_seeds",
+    "count": 9
+  }
+}

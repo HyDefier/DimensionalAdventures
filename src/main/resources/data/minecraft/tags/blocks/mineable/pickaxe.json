@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "dimensionaladventures:chicken_comb_block",
+    "dimensionaladventures:eggshell_block",
+    "dimensionaladventures:red_egg_block",
+    "dimensionaladventures:steel_scrap_block"
+  ]
+}
