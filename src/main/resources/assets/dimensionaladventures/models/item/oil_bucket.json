@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "dimensionaladventures:item/oil_bucket"
+    "layer0": "dimensionaladventures:items/oil_bucket"
   }
 }

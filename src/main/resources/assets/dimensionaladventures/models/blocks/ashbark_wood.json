@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "dimensionaladventures:blocks/ashbark_log",
+    "side": "dimensionaladventures:blocks/ashbark_log"
+  }
+}

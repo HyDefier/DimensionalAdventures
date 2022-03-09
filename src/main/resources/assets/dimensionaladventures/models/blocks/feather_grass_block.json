@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "particle": "dimensionaladventures:blocks/feather_dirt_block",
+    "top": "dimensionaladventures:blocks/feather_block",
+    "bottom": "dimensionaladventures:blocks/feather_dirt_block",
+    "side": "dimensionaladventures:blocks/feather_grass_block_side"
+  }
+}

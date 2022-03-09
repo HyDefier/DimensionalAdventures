@@ -1,5 +1,5 @@
 {
   "variants": {
-    "": { "model": "dimensionaladventures:block/eggshell_block" }
+    "": { "model": "dimensionaladventures:blocks/eggshell_block" }
   }
 }

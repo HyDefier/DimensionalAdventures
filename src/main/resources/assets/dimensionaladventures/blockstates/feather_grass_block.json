@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "dimensionaladventures:blocks/feather_grass_block"
+      },
+      {
+        "model": "dimensionaladventures:blocks/feather_grass_block",
+        "y": 90
+      },
+      {
+        "model": "dimensionaladventures:blocks/feather_grass_block",
+        "y": 180
+      },
+      {
+        "model": "dimensionaladventures:blocks/feather_grass_block",
+        "y": 270
+      }
+    ]
+  }
+}

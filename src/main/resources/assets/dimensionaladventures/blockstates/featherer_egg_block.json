@@ -1,5 +1,5 @@
 {
   "variants": {
-    "": { "model": "dimensionaladventures:block/featherer_egg_block"}
+    "": { "model": "dimensionaladventures:blocks/featherer_egg_block"}
   }
 }

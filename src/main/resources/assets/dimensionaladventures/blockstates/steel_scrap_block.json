@@ -1,5 +1,5 @@
 {
   "variants": {
-    "": { "model": "dimensionaladventures:block/steel_scrap_block" }
+    "": { "model": "dimensionaladventures:blocks/steel_scrap_block" }
   }
 }

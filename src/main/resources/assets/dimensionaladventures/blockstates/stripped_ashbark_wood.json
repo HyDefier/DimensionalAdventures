@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "dimensionaladventures:blocks/stripped_ashbark_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "dimensionaladventures:blocks/stripped_ashbark_wood"
+    },
+    "axis=z": {
+      "model": "dimensionaladventures:blocks/stripped_ashbark_wood",
+      "x": 90
+    }
+  }
+}

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "dimensionaladventures:block/oil"
+      "model": "dimensionaladventures:blocks/oil"
     }
   }
 }

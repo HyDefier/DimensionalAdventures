@@ -1,5 +1,5 @@
 {
   "variants": {
-    "": { "model": "dimensionaladventures:block/cyan_smooth_feather_block" }
+    "": { "model": "dimensionaladventures:blocks/cyan_smooth_feather_block" }
   }
 }

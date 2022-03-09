@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "tag": "dimensionaladventures:feather_wood_logs"
+    }
+  ],
+  "result": {
+    "item": "dimensionaladventures:feather_wood_planks",
+    "count": 4
+  }
+}

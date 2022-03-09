@@ -9,6 +9,7 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.registries.DeferredRegister;
@@ -74,11 +75,20 @@ public final class ItemInit {
     public static final RegistryObject<BlockItem> CYAN_SMOOTH_FEATHER_BLOCK_ITEM = ITEMS.register
             ("cyan_smooth_feather_block", () -> new BlockItem(BlockInit.CYAN_SMOOTH_FEATHER_BLOCK.get(),
             new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
+    public static final RegistryObject<BlockItem> DEEP_SERASTONE_BLOCK_ITEM = ITEMS.register
+            ("deep_serastone_block", () -> new BlockItem(BlockInit.DEEP_SERASTONE_BLOCK.get(),
+            new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
     public static final RegistryObject<BlockItem> EGGSHELL_BLOCK_ITEM = ITEMS.register("eggshell_block"
             , () -> new BlockItem(BlockInit.EGGSHELL_BLOCK.get(), new Item.Properties()
             .tab(DimensionalAdventures.SERAMANIA_TAB)));
     public static final RegistryObject<BlockItem> FEATHER_BLOCK_ITEM = ITEMS.register("feather_block"
             , () -> new BlockItem(BlockInit.FEATHER_BLOCK.get(), new Item.Properties()
+            .tab(DimensionalAdventures.SERAMANIA_TAB)));
+    public static final RegistryObject<BlockItem> FEATHER_DIRT_BLOCK_ITEM = ITEMS.register("feather_dirt_block"
+            , () -> new BlockItem(BlockInit.FEATHER_DIRT_BLOCK.get(), new Item.Properties()
+            .tab(DimensionalAdventures.SERAMANIA_TAB)));
+    public static final RegistryObject<BlockItem> FEATHER_GRASS_BLOCK_ITEM = ITEMS.register("feather_grass_block"
+            , () -> new BlockItem(BlockInit.FEATHER_GRASS_BLOCK.get(), new Item.Properties()
             .tab(DimensionalAdventures.SERAMANIA_TAB)));
     public static final RegistryObject<BlockItem> GIZZARD_SEED_BLOCK_ITEM = ITEMS.register("gizzard_seed_block"
             , () -> new BlockItem(BlockInit.GIZZARD_SEED_BLOCK.get(), new Item.Properties()
@@ -115,6 +125,9 @@ public final class ItemInit {
             .tab(DimensionalAdventures.SERAMANIA_TAB)));
     public static final RegistryObject<BlockItem> RED_SMOOTH_FEATHER_BLOCK_ITEM = ITEMS.register
             ("red_smooth_feather_block", () -> new BlockItem(BlockInit.RED_SMOOTH_FEATHER_BLOCK.get(),
+            new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
+    public static final RegistryObject<BlockItem> SERASTONE_BLOCK_ITEM = ITEMS.register
+            ("serastone_block", () -> new BlockItem(BlockInit.SERASTONE_BLOCK.get(),
             new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
     public static final RegistryObject<BlockItem> SMOOTH_FEATHER_BLOCK_ITEM = ITEMS.register
             ("smooth_feather_block", () -> new BlockItem(BlockInit.SMOOTH_FEATHER_BLOCK.get(),
@@ -162,8 +175,8 @@ public final class ItemInit {
             new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
 
     //SPAWN EGG ITEMS
-    public static final RegistryObject<ForgeSpawnEggItem> FEATHERER_SPAWN_EGG      = ITEMS.register(
-            "featherer_spawn_egg"     , () -> new ForgeSpawnEggItem(EntityInit.FEATHERER     , 0xFFD4F8,
+    public static final RegistryObject<ForgeSpawnEggItem> FEATHERER_SPAWN_EGG = ITEMS.register(
+            "featherer_spawn_egg", () -> new ForgeSpawnEggItem(EntityInit.FEATHERER, 0xFFD4F8,
             0xFCFCF4, new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB).stacksTo(16)));
     public static final RegistryObject<ForgeSpawnEggItem> PORTAL_CHICKEN_SPAWN_EGG = ITEMS.register(
             "portal_chicken_spawn_egg", () -> new ForgeSpawnEggItem(EntityInit.PORTAL_CHICKEN, 0x266775,
@@ -172,10 +185,9 @@ public final class ItemInit {
     //TOOLS
     public static final RegistryObject<BucketItem> EGGSHELL_BUCKET = ITEMS.register("eggshell_bucket",() -> new
             BucketItem(Fluids.EMPTY, (new Item.Properties()).stacksTo(16).tab(DimensionalAdventures.SERAMANIA_TAB)));
-
     public static final RegistryObject<Item> OIL_BUCKET = ITEMS.register("oil_bucket",
-            () -> new BucketItem(() -> ModFluids.OIL_FLUID.get(),
-                    new Item.Properties().stacksTo(1).tab(DimensionalAdventures.SERAMANIA_TAB)));
+            () -> new BucketItem(ModFluids.OIL_FLUID,
+            new Item.Properties().stacksTo(1).tab(DimensionalAdventures.SERAMANIA_TAB)));
     public static final RegistryObject<AxeItem> FEATHER_AXE = ITEMS.register("feather_axe",
             () -> new AxeItem(ToolMaterialInit.FEATHER, 0, 1.0f,
             new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
@@ -191,4 +203,82 @@ public final class ItemInit {
     public static final RegistryObject<SwordItem> FEATHER_SWORD = ITEMS.register("feather_sword",
             () -> new SwordItem(ToolMaterialInit.FEATHER, 0, 1.0f,
             new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
+
+    //WOOD ITEMS
+    public static final RegistryObject<BlockItem> ASHBARK_LOG_ITEM = ITEMS.register
+            ("ashbark_log", () -> new BlockItem(BlockInit.ASHBARK_LOG.get(),
+            new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
+    public static final RegistryObject<BlockItem> ASHBARK_ITEM = ITEMS.register
+            ("ashbark_wood", () -> new BlockItem(BlockInit.ASHBARK_WOOD.get(),
+            new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
+    public static final RegistryObject<BlockItem> STRIPPED_ASHBARK_LOG_ITEM = ITEMS.register
+            ("stripped_ashbark_log", () -> new BlockItem(BlockInit.STRIPPED_ASHBARK_LOG.get(),
+            new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
+    public static final RegistryObject<BlockItem> STRIPPED_ASHBARK_ITEM = ITEMS.register
+            ("stripped_ashbark_wood", () -> new BlockItem(BlockInit.STRIPPED_ASHBARK_WOOD.get(),
+            new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
+    public static final RegistryObject<BlockItem> ASHBARK_PLANKS_ITEM = ITEMS.register
+            ("ashbark_planks", () -> new BlockItem(BlockInit.ASHBARK_PLANKS.get(),
+            new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
+    public static final RegistryObject<BlockItem> ASHBARK_LEAVES_ITEM = ITEMS.register
+            ("ashbark_leaves", () -> new BlockItem(BlockInit.ASHBARK_LEAVES.get(),
+            new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
+    public static final RegistryObject<BlockItem> ASHBARK_SAPLING_ITEM = ITEMS.register
+            ("ashbark_sapling", () -> new BlockItem(BlockInit.ASHBARK_SAPLING.get(),
+            new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
+
+    public static final RegistryObject<BlockItem> ASHBARK_DOOR_ITEM = ITEMS.register
+            ("ashbark_door", () -> new DoubleHighBlockItem(BlockInit.ASHBARK_DOOR.get(),
+            new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
+    public static final RegistryObject<BlockItem> ASHBARK_SLAB_ITEM = ITEMS.register
+            ("ashbark_slab", () -> new BlockItem(BlockInit.ASHBARK_SLAB.get(), new Item.Properties()
+            .tab(DimensionalAdventures.SERAMANIA_TAB)));
+    public static final RegistryObject<BlockItem> ASHBARK_PRESSURE_PLATE_ITEM = ITEMS.register
+            ("ashbark_pressure_plate", () -> new BlockItem(BlockInit.ASHBARK_PRESSURE_PLATE.get(),
+            new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
+    public static final RegistryObject<BlockItem> ASHBARK_FENCE_ITEM = ITEMS.register
+            ("ashbark_fence", () -> new BlockItem(BlockInit.ASHBARK_FENCE.get(), new Item.Properties()
+            .tab(DimensionalAdventures.SERAMANIA_TAB)));
+    public static final RegistryObject<BlockItem> ASHBARK_TRAPDOOR_ITEM = ITEMS.register
+            ("ashbark_trapdoor", () -> new BlockItem(BlockInit.ASHBARK_TRAPDOOR.get(), new Item.Properties()
+            .tab(DimensionalAdventures.SERAMANIA_TAB)));
+    public static final RegistryObject<BlockItem> ASHBARK_FENCE_GATE_ITEM = ITEMS.register
+            ("ashbark_fence_gate", () -> new BlockItem(BlockInit.ASHBARK_FENCE_GATE.get(), new
+            Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
+    public static final RegistryObject<BlockItem> ASHBARK_STAIRS_ITEM = ITEMS.register
+            ("ashbark_stairs", () -> new BlockItem(BlockInit.ASHBARK_STAIRS.get(), new Item.Properties()
+            .tab(DimensionalAdventures.SERAMANIA_TAB)));
+    public static final RegistryObject<BlockItem> ASHBARK_BUTTON_ITEM = ITEMS.register
+            ("ashbark_button", () -> new BlockItem(BlockInit.ASHBARK_BUTTON.get(), new Item.Properties()
+            .tab(DimensionalAdventures.SERAMANIA_TAB)));
+    public static final RegistryObject<BlockItem> ASHBARK_SIGN_ITEM = ITEMS.register
+            ("ashbark_sign", () -> new SignItem((new Item.Properties()).stacksTo(16).tab
+            (DimensionalAdventures.SERAMANIA_TAB), BlockInit.ASHBARK_SIGN.get(), BlockInit.ASHBARK_WALL_SIGN.get()));
+    
+    public static final RegistryObject<BlockItem> RED_ASHBARK_LEAVES_ITEM = ITEMS.register
+            ("red_ashbark_leaves", () -> new BlockItem(BlockInit.RED_ASHBARK_LEAVES.get(),
+                    new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
+
+    public static final RegistryObject<BlockItem> FEATHER_WOOD_LOG_ITEM = ITEMS.register
+            ("feather_wood_log", () -> new BlockItem(BlockInit.FEATHER_WOOD_LOG.get(),
+            new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
+    public static final RegistryObject<BlockItem> FEATHER_WOOD_ITEM = ITEMS.register
+            ("feather_wood", () -> new BlockItem(BlockInit.FEATHER_WOOD.get(),
+            new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
+    public static final RegistryObject<BlockItem> STRIPPED_FEATHER_WOOD_LOG_ITEM = ITEMS.register
+            ("stripped_feather_wood_log", () -> new BlockItem(BlockInit.STRIPPED_FEATHER_WOOD_LOG.get(),
+            new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
+    public static final RegistryObject<BlockItem> STRIPPED_FEATHER_WOOD_ITEM = ITEMS.register
+            ("stripped_feather_wood", () -> new BlockItem(BlockInit.STRIPPED_FEATHER_WOOD.get(),
+            new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
+    public static final RegistryObject<BlockItem> FEATHER_WOOD_PLANKS_ITEM = ITEMS.register
+            ("feather_wood_planks", () -> new BlockItem(BlockInit.FEATHER_WOOD_PLANKS.get(),
+            new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
+    public static final RegistryObject<BlockItem> FEATHER_WOOD_LEAVES_ITEM = ITEMS.register
+            ("feather_wood_leaves", () -> new BlockItem(BlockInit.FEATHER_WOOD_LEAVES.get(),
+            new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
+    public static final RegistryObject<BlockItem> FEATHER_WOOD_SAPLING_ITEM = ITEMS.register
+            ("feather_wood_sapling", () -> new BlockItem(BlockInit.FEATHER_WOOD_SAPLING.get(),
+            new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
+
 }

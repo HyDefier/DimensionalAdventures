@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "dimensionaladventures:blocks/stripped_feather_wood_log_top",
+    "side": "dimensionaladventures:blocks/stripped_feather_wood_log"
+  }
+}

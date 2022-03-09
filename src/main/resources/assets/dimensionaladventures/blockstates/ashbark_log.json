@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "dimensionaladventures:blocks/ashbark_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "dimensionaladventures:blocks/ashbark_log"
+    },
+    "axis=z": {
+      "model": "dimensionaladventures:blocks/ashbark_log_horizontal",
+      "x": 90
+    }
+  }
+}

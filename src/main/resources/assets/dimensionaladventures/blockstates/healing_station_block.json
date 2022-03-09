@@ -1,8 +1,8 @@
 {
   "variants": {
-    "facing=north": { "model": "dimensionaladventures:block/healing_station_block"           },
-    "facing=east" : { "model": "dimensionaladventures:block/healing_station_block", "y": 90  },
-    "facing=south": { "model": "dimensionaladventures:block/healing_station_block", "y": 180 },
-    "facing=west" : { "model": "dimensionaladventures:block/healing_station_block", "y": 270 }
+    "facing=north": { "model": "dimensionaladventures:blocks/healing_station_block"           },
+    "facing=east" : { "model": "dimensionaladventures:blocks/healing_station_block", "y": 90  },
+    "facing=south": { "model": "dimensionaladventures:blocks/healing_station_block", "y": 180 },
+    "facing=west" : { "model": "dimensionaladventures:blocks/healing_station_block", "y": 270 }
   }
 }

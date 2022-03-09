@@ -14,8 +14,9 @@ import java.util.Map;
 public class ModArmorItem extends ArmorItem {
     private static final Map<ArmorMaterial, MobEffectInstance> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>())
-                    .put(ArmorMaterialInit.FEATHER,
-                            new MobEffectInstance(MobEffects.SLOW_FALLING, 200, 1)).build();
+            .put(ArmorMaterialInit.FEATHER,
+            new MobEffectInstance(MobEffects.SLOW_FALLING, 1, 1, true, false, false))
+            .build();
 
     public ModArmorItem(ArmorMaterial material, EquipmentSlot slot, Properties settings) {
         super(material, slot, settings);
@@ -25,7 +26,27 @@ public class ModArmorItem extends ArmorItem {
     public void onArmorTick(ItemStack stack, Level world, Player player) {
         if(!world.isClientSide()) {
             if(hasFullSuitOfArmorOn(player)) {
-                evaluateArmorEffects(player, true);
+                evaluateArmorEffectsFeatherFalling(player, true);
+            }
+        }
+    }
+
+    private void evaluateArmorEffectsFeatherFalling(Player player, boolean allowWings) {
+        for (Map.Entry<ArmorMaterial, MobEffectInstance> entry : MATERIAL_TO_EFFECT_MAP.entrySet()) {
+            ArmorMaterial mapArmorMaterial = entry.getKey();
+            MobEffectInstance mapStatusEffect = entry.getValue();
+
+            if(hasCorrectArmorOn(mapArmorMaterial, player, allowWings)) {
+                if(!player.isCrouching()) { //Allow Fast Falling
+                    //ItemStack breastplate = player.getInventory().getArmor(2);
+                    if (player.isFallFlying()) {
+                        if (!player.isSprinting()) { //Allow fast flight or "airbrakes"
+                            addStatusEffectForMaterial(player, mapArmorMaterial, mapStatusEffect, allowWings);
+                        }
+                    } else {
+                        addStatusEffectForMaterial(player, mapArmorMaterial, mapStatusEffect, allowWings);
+                    }
+                }
             }
         }
     }
