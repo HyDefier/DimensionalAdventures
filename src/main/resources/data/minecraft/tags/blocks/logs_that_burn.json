@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "dimensionaladventures:ashbark_log",
+    "dimensionaladventures:ashbark_wood",
+    "dimensionaladventures:stripped_ashbark_log",
+    "dimensionaladventures:stripped_ashbark_wood",
+
+    "dimensionaladventures:feather_wood_log",
+    "dimensionaladventures:feather_wood",
+    "dimensionaladventures:stripped_feather_wood_log",
+    "dimensionaladventures:stripped_feather_wood"
+  ]
+}

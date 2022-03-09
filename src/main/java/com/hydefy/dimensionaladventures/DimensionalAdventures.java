@@ -1,11 +1,17 @@
 package com.hydefy.dimensionaladventures;
 
+import com.hydefy.dimensionaladventures.client.event.ClientModEvents;
 import com.hydefy.dimensionaladventures.common.block.ModFluids;
+import com.hydefy.dimensionaladventures.common.block.entity.ModBlockEntities;
+import com.hydefy.dimensionaladventures.core.event.CommonModEvents;
 import com.hydefy.dimensionaladventures.core.init.*;
 import com.hydefy.dimensionaladventures.core.world.biome.SeramaniaBiomes;
-import com.hydefy.dimensionaladventures.core.world.dimension.ModDimensions;
+//import com.hydefy.dimensionaladventures.core.world.dimension.ModDimensions;
+import com.hydefy.dimensionaladventures.core.world.features.trees.ModWoodType;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.state.properties.WoodType;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.jetbrains.annotations.NotNull;
@@ -52,15 +58,24 @@ public class DimensionalAdventures
         var bus = FMLJavaModLoadingContext.get().getModEventBus();
 
         SoundInit               .SOUNDS                  .register(bus);
-        BlockEntityInit         .BLOCK_ENTITIES          .register(bus);
         BlockInit               .BLOCKS                  .register(bus);
         ItemInit                .ITEMS                   .register(bus);
         EntityInit              .ENTITIES                .register(bus);
 
+        WoodType.register(ModWoodType.ASHBARK);
+        WoodType.register(ModWoodType.FEATHER);
+
         ModFluids.register(bus);
+
+        ModBlockEntities.register(bus);
 
         SeramaniaBiomes.register(bus);
 
-        ModDimensions.register();
+        //Unnecessary?
+//        bus.addListener(CommonModEvents::commonSetup);
+//        bus.addListener(ClientModEvents::clientSetup);
+//
+//        // Register self
+//        MinecraftForge.EVENT_BUS.register(this);
     }
 }

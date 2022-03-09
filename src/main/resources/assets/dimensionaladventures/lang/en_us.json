@@ -15,8 +15,11 @@
   "block.dimensionaladventures.brown_smooth_feather_block": "Brown Smooth Feather Block",
   "block.dimensionaladventures.chicken_comb_block": "Chicken Comb Block",
   "block.dimensionaladventures.cyan_smooth_feather_block": "Cyan Smooth Feather Block",
+  "block.dimensionaladventures.deep_serastone_block": "Seraslate",
   "block.dimensionaladventures.eggshell_block": "Eggshell Block",
   "block.dimensionaladventures.feather_block": "Feather Block",
+  "block.dimensionaladventures.feather_dirt_block": "Featherdirt Block",
+  "block.dimensionaladventures.feather_grass_block": "Feathergrass Block",
   "block.dimensionaladventures.gizzard_seed_block": "Gizzard Seed Block",
   "block.dimensionaladventures.gray_smooth_feather_block": "Gray Smooth Feather Block",
   "block.dimensionaladventures.green_smooth_feather_block": "Green Smooth Feather Block",
@@ -29,9 +32,12 @@
   "block.dimensionaladventures.purple_smooth_feather_block": "Purple Smooth Feather Block",
   "block.dimensionaladventures.red_egg_block": "Red Egg Block",
   "block.dimensionaladventures.red_smooth_feather_block": "Red Smooth Feather Block",
+  "block.dimensionaladventures.serastone_block": "Serastone",
   "block.dimensionaladventures.smooth_feather_block": "Smooth Feather Block",
   "block.dimensionaladventures.white_smooth_feather_block": "White Smooth Feather Block",
   "block.dimensionaladventures.yellow_smooth_feather_block": "Yellow Smooth Feather Block",
+
+  "item.dimensionaladventures.ashbark_sign": "Ashbark Sign",
 
   "itemGroup.dimensionaladventures_seramania": "Seramania",
   "itemGroup.dimensionaladventures_ruined_technology": "Ruined Technology",
@@ -60,5 +66,36 @@
   "item.dimensionaladventures.feather_hoe": "Feather Hoe",
   "item.dimensionaladventures.feather_pickaxe": "Feather Pickaxe",
   "item.dimensionaladventures.feather_shovel": "Feather Shovel",
-  "item.dimensionaladventures.feather_sword": "Feather Sword"
+  "item.dimensionaladventures.feather_sword": "Feather Sword",
+
+  "block.dimensionaladventures.ashbark_log": "Ashbark Log",
+  "block.dimensionaladventures.ashbark_planks": "Ashbark Planks",
+  "block.dimensionaladventures.ashbark_wood": "Ashbark Wood",
+  "block.dimensionaladventures.stripped_ashbark_log": "Stripped Ashbark Log",
+  "block.dimensionaladventures.stripped_ashbark_wood": "Stripped Ashbark Wood",
+  "block.dimensionaladventures.ashbark_sapling": "Ashbark Sapling",
+  "block.dimensionaladventures.potted_ashbark_sapling": "Potted Ashbark Sapling",
+  "block.dimensionaladventures.ashbark_leaves": "Ashbark Leaves",
+
+  "block.dimensionaladventures.ashbark_door": "Ashbark Door",
+  "block.dimensionaladventures.ashbark_slab": "Ashbark Slab",
+  "block.dimensionaladventures.ashbark_pressure_plate": "Ashbark Pressure Plate",
+  "block.dimensionaladventures.ashbark_fence": "Ashbark Fence",
+  "block.dimensionaladventures.ashbark_trapdoor": "Ashbark Trapdoor",
+  "block.dimensionaladventures.ashbark_fence_gate": "Ashbark Fence Gate",
+  "block.dimensionaladventures.ashbark_stairs": "Ashbark Stairs",
+  "block.dimensionaladventures.ashbark_button": "Ashbark Button",
+  "block.dimensionaladventures.ashbark_sign": "Ashbark Sign",
+  "block.dimensionaladventures.ashbark_wall_sign": "Ashbark Wall Sign",
+
+  "block.dimensionaladventures.red_ashbark_leaves": "Red Ashbark Leaves",
+
+  "block.dimensionaladventures.feather_wood_log": "Featherwood Log",
+  "block.dimensionaladventures.feather_wood_planks": "Featherwood Planks",
+  "block.dimensionaladventures.feather_wood": "Featherwood Wood",
+  "block.dimensionaladventures.stripped_feather_wood_log": "Stripped Featherwood Log",
+  "block.dimensionaladventures.stripped_feather_wood": "Stripped Featherwood Wood",
+  "block.dimensionaladventures.feather_wood_sapling": "Featherwood Sapling",
+  "block.dimensionaladventures.potted_feather_wood_sapling": "Potted Featherwood Sapling",
+  "block.dimensionaladventures.feather_wood_leaves": "Featherwood Leaves"
 }

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "dimensionaladventures:blocks/ashbark_slab"
+    },
+    "type=double": {
+      "model": "dimensionaladventures:blocks/ashbark_planks"
+    },
+    "type=top": {
+      "model": "dimensionaladventures:blocks/ashbark_slab_top"
+    }
+  }
+}

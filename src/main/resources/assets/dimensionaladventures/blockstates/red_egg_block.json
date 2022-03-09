@@ -1,5 +1,5 @@
 {
   "variants": {
-    "": { "model": "dimensionaladventures:block/red_egg_block"}
+    "": { "model": "dimensionaladventures:blocks/red_egg_block"}
   }
 }

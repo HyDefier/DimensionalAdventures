@@ -11,7 +11,7 @@ import net.minecraft.world.entity.Entity;
 
 public class FeathererRenderer<Type extends Featherer> extends MobRenderer<Type, FeathererModel<Type>> {
 
-    private static final ResourceLocation TEXTURE = new ResourceLocation(DimensionalAdventures.MODID, "textures/entities/featherer.png");
+    private static final ResourceLocation TEXTURE = new ResourceLocation(DimensionalAdventures.MODID, "textures/entity/featherer.png");
 
     public FeathererRenderer(EntityRendererProvider.Context context) {
         super(context, new FeathererModel<>(context.bakeLayer(FeathererModel.LAYER_LOCATION)), 0.5f);

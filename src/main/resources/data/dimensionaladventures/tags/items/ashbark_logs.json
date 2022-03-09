@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "dimensionaladventures:ashbark_log",
+    "dimensionaladventures:ashbark_wood",
+    "dimensionaladventures:stripped_ashbark_log",
+    "dimensionaladventures:stripped_ashbark_wood"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "wooden_button",
+  "ingredients": [
+    {
+      "item": "dimensionaladventures:ashbark_planks"
+    }
+  ],
+  "result": {
+    "item": "dimensionaladventures:ashbark_button"
+  }
+}

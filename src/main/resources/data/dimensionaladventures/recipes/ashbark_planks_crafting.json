@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "tag": "dimensionaladventures:ashbark_logs"
+    }
+  ],
+  "result": {
+    "item": "dimensionaladventures:ashbark_planks",
+    "count": 4
+  }
+}

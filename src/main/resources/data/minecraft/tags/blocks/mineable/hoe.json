@@ -1,13 +1,14 @@
 {
   "replace": false,
   "values": [
+    "dimensionaladventures:chicken_comb_block",
+    "dimensionaladventures:feather_block",
+    "dimensionaladventures:gizzard_seed_block",
+
     "dimensionaladventures:black_smooth_feather_block",
     "dimensionaladventures:blue_smooth_feather_block",
     "dimensionaladventures:brown_smooth_feather_block",
-    "dimensionaladventures:chicken_comb_block",
     "dimensionaladventures:cyan_smooth_feather_block",
-    "dimensionaladventures:feather_block",
-    "dimensionaladventures:gizzard_seed_block",
     "dimensionaladventures:gray_smooth_feather_block",
     "dimensionaladventures:green_smooth_feather_block",
     "dimensionaladventures:light_blue_smooth_feather_block",
@@ -20,6 +21,10 @@
     "dimensionaladventures:red_smooth_feather_block",
     "dimensionaladventures:smooth_feather_block",
     "dimensionaladventures:white_smooth_feather_block",
-    "dimensionaladventures:yellow_smooth_feather_block"
+    "dimensionaladventures:yellow_smooth_feather_block",
+
+    "dimensionaladventures:ashbark_leaves",
+    "dimensionaladventures:red_ashbark_leaves",
+    "dimensionaladventures:feather_wood_leaves"
   ]
 }

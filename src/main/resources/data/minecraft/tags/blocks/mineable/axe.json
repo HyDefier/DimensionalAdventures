@@ -1,6 +1,29 @@
 {
   "replace": false,
   "values": [
-    "dimensionaladventures:chicken_comb_block"
+    "dimensionaladventures:chicken_comb_block",
+
+    "dimensionaladventures:ashbark_log",
+    "dimensionaladventures:ashbark_wood",
+    "dimensionaladventures:stripped_ashbark_log",
+    "dimensionaladventures:stripped_ashbark_wood",
+    "dimensionaladventures:ashbark_planks",
+    
+    "dimensionaladventures:ashbark_door",
+    "dimensionaladventures:ashbark_slab",
+    "dimensionaladventures:ashbark_pressure_plate",
+    "dimensionaladventures:ashbark_fence",
+    "dimensionaladventures:ashbark_trapdoor",
+    "dimensionaladventures:ashbark_fence_gate",
+    "dimensionaladventures:ashbark_stairs",
+    "dimensionaladventures:ashbark_button",
+    "dimensionaladventures:ashbark_sign",
+    "dimensionaladventures:ashbark_wall_sign",
+
+    "dimensionaladventures:feather_wood_log",
+    "dimensionaladventures:feather_wood",
+    "dimensionaladventures:stripped_feather_wood_log",
+    "dimensionaladventures:stripped_feather_wood",
+    "dimensionaladventures:feather_wood_planks"
   ]
 }

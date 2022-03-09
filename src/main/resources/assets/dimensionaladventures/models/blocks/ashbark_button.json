@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button",
+  "textures": {
+    "texture": "dimensionaladventures:blocks/ashbark_planks"
+  }
+}

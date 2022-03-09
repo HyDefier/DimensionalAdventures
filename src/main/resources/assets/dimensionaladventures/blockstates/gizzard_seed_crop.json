@@ -1,28 +1,28 @@
 {
   "variants": {
     "age=0": {
-      "model": "dimensionaladventures:block/gizzard_seed_stage0"
+      "model": "dimensionaladventures:blocks/gizzard_seed_stage0"
     },
     "age=1": {
-      "model": "dimensionaladventures:block/gizzard_seed_stage1"
+      "model": "dimensionaladventures:blocks/gizzard_seed_stage1"
     },
     "age=2": {
-      "model": "dimensionaladventures:block/gizzard_seed_stage2"
+      "model": "dimensionaladventures:blocks/gizzard_seed_stage2"
     },
     "age=3": {
-      "model": "dimensionaladventures:block/gizzard_seed_stage3"
+      "model": "dimensionaladventures:blocks/gizzard_seed_stage3"
     },
     "age=4": {
-      "model": "dimensionaladventures:block/gizzard_seed_stage4"
+      "model": "dimensionaladventures:blocks/gizzard_seed_stage4"
     },
     "age=5": {
-      "model": "dimensionaladventures:block/gizzard_seed_stage5"
+      "model": "dimensionaladventures:blocks/gizzard_seed_stage5"
     },
     "age=6": {
-      "model": "dimensionaladventures:block/gizzard_seed_stage6"
+      "model": "dimensionaladventures:blocks/gizzard_seed_stage6"
     },
     "age=7": {
-      "model": "dimensionaladventures:block/gizzard_seed_stage7"
+      "model": "dimensionaladventures:blocks/gizzard_seed_stage7"
     }
   }
 }

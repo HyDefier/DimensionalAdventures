@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "dimensionaladventures:blocks/feather_wood_sapling"
+  }
+}

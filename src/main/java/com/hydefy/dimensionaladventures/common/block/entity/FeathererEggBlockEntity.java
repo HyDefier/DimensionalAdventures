@@ -1,7 +1,6 @@
 package com.hydefy.dimensionaladventures.common.block.entity;
 
 import com.hydefy.dimensionaladventures.common.entity.SeatEntity;
-import com.hydefy.dimensionaladventures.core.init.BlockEntityInit;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
@@ -22,7 +21,7 @@ public class FeathererEggBlockEntity extends BlockEntity {
     public final Map<UUID, Integer> playerUses = new HashMap<>();
 
     public FeathererEggBlockEntity(BlockPos pos, BlockState state) {
-        super(BlockEntityInit.FEATHERER_EGG_BLOCK.get() ,pos, state);
+        super(ModBlockEntities.FEATHERER_EGG_BLOCK.get() ,pos, state);
     }
 
     public SeatEntity getOrCreateSeat() {

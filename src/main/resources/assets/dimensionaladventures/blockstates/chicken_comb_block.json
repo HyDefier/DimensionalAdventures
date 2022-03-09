@@ -1,5 +1,5 @@
 {
   "variants": {
-    "": { "model": "dimensionaladventures:block/chicken_comb_block" }
+    "": { "model": "dimensionaladventures:blocks/chicken_comb_block" }
   }
 }

@@ -18,9 +18,9 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ModFluids {
-    public static final ResourceLocation WATER_STILL_RL = new ResourceLocation("block/oil_still");
-    public static final ResourceLocation WATER_FLOWING_RL = new ResourceLocation("block/water_flow");
-    public static final ResourceLocation WATER_OVERLAY_RL = new ResourceLocation("block/water_overlay");
+    public static final ResourceLocation WATER_STILL_RL = new ResourceLocation("blocks/oil_still");
+    public static final ResourceLocation WATER_FLOWING_RL = new ResourceLocation("blocks/oil_flow");
+    public static final ResourceLocation WATER_OVERLAY_RL = new ResourceLocation("blocks/oil_overlay");
 
     public static final DeferredRegister<Fluid> FLUIDS
             = DeferredRegister.create(ForgeRegistries.FLUIDS, DimensionalAdventures.MODID);
