@@ -5,7 +5,23 @@
     "dimensionaladventures:eggshell_block",
     "dimensionaladventures:red_egg_block",
     "dimensionaladventures:steel_scrap_block",
+
+    "dimensionaladventures:cobbled_serastone_block",
+    "dimensionaladventures:cobbled_serastone_slab",
+
+    "dimensionaladventures:mossy_cobbled_serastone_block",
+    "dimensionaladventures:mossy_cobbled_serastone_slab",
+
     "dimensionaladventures:serastone_block",
-    "dimensionaladventures:deep_serastone_block"
+    "dimensionaladventures:serastone_slab",
+
+    "dimensionaladventures:mossy_serastone_block",
+    "dimensionaladventures:mossy_serastone_slab",
+
+    "dimensionaladventures:deep_serastone_block",
+    "dimensionaladventures:deep_serastone_slab",
+
+    "dimensionaladventures:mossy_deep_serastone_block",
+    "dimensionaladventures:mossy_deep_serastone_slab"
   ]
 }

@@ -35,10 +35,17 @@ public final class ClientModEvents {
         ItemBlockRenderTypes.setRenderLayer(BlockInit.ASHBARK_TRAPDOOR.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlockInit.ASHBARK_BUTTON.get(), RenderType.cutout());
 
+        ItemBlockRenderTypes.setRenderLayer(BlockInit.ASHBARK_PANEL.get(), RenderType.cutout());
+
         ItemBlockRenderTypes.setRenderLayer(BlockInit.RED_ASHBARK_LEAVES.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(BlockInit.FEATHER_WOOD_LEAVES.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlockInit.FEATHER_WOOD_SAPLING.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlockInit.FEATHER_WOOD_DOOR.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlockInit.FEATHER_WOOD_TRAPDOOR.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlockInit.FEATHER_WOOD_BUTTON.get(), RenderType.cutout());
+
+        ItemBlockRenderTypes.setRenderLayer(BlockInit.FEATHER_WOOD_PANEL.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(ModFluids.OIL_FLUID.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModFluids.OIL_BLOCK.get(), RenderType.translucent());

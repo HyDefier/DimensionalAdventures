@@ -3,19 +3,24 @@
   "block.dimensionaladventures.healing_station_block": "Healing Station",
   "block.dimensionaladventures.steel_scrap_block": "Steel Scrap Block",
 
+
+
   "item.dimensionaladventures.portal_box": "Portal Box",
+
+
 
   "item.dimensionaladventures.feather_helmet": "Feather Helmet",
   "item.dimensionaladventures.feather_chestplate": "Feather Chestplate",
   "item.dimensionaladventures.feather_leggings": "Feather Leggings",
   "item.dimensionaladventures.feather_boots": "Feather Boots",
 
+
+
   "block.dimensionaladventures.black_smooth_feather_block": "Black Smooth Feather Block",
   "block.dimensionaladventures.blue_smooth_feather_block": "Blue Smooth Feather Block",
   "block.dimensionaladventures.brown_smooth_feather_block": "Brown Smooth Feather Block",
   "block.dimensionaladventures.chicken_comb_block": "Chicken Comb Block",
   "block.dimensionaladventures.cyan_smooth_feather_block": "Cyan Smooth Feather Block",
-  "block.dimensionaladventures.deep_serastone_block": "Seraslate",
   "block.dimensionaladventures.eggshell_block": "Eggshell Block",
   "block.dimensionaladventures.feather_block": "Feather Block",
   "block.dimensionaladventures.feather_dirt_block": "Featherdirt Block",
@@ -32,34 +37,52 @@
   "block.dimensionaladventures.purple_smooth_feather_block": "Purple Smooth Feather Block",
   "block.dimensionaladventures.red_egg_block": "Red Egg Block",
   "block.dimensionaladventures.red_smooth_feather_block": "Red Smooth Feather Block",
-  "block.dimensionaladventures.serastone_block": "Serastone",
   "block.dimensionaladventures.smooth_feather_block": "Smooth Feather Block",
   "block.dimensionaladventures.white_smooth_feather_block": "White Smooth Feather Block",
   "block.dimensionaladventures.yellow_smooth_feather_block": "Yellow Smooth Feather Block",
 
+
+
   "item.dimensionaladventures.ashbark_sign": "Ashbark Sign",
+  "item.dimensionaladventures.feather_wood_sign": "Featherwood Sign",
+
+
 
   "itemGroup.dimensionaladventures_seramania": "Seramania",
   "itemGroup.dimensionaladventures_ruined_technology": "Ruined Technology",
 
+
+
   "block.dimensionaladventures.gizzard_seed_crop": "Gizzard Seed Crop",
+
+
 
   "item.dimensionaladventures.cooked_hearty_chicken": "Cooked Hearty Chicken",
   "item.dimensionaladventures.hearty_chicken": "Hearty Chicken",
   "item.dimensionaladventures.golden_cooked_hearty_chicken": "Golden Cooked Hearty Chicken",
 
+
+
   "item.dimensionaladventures.featherer_spawn_egg": "Spawn Featherer",
   "item.dimensionaladventures.portal_chicken_spawn_egg": "Spawn Portal Chicken",
 
+
+
   "entity.dimensionaladventures.featherer": "Featherer",
   "entity.dimensionaladventures.portal_chicken": "Portal Chicken",
+
+
 
   "item.dimensionaladventures.broken_eggshell": "Eggshell Bits",
   "item.dimensionaladventures.portal_egg": "Portal Egg",
   "item.dimensionaladventures.red_egg": "Red Egg",
   "item.dimensionaladventures.steel_scrap": "Steel Scrap",
 
+
+
   "item.dimensionaladventures.gizzard_seeds": "Gizzard Seeds",
+
+
 
   "item.dimensionaladventures.eggshell_bucket": "Eggshell Bucket",
   "item.dimensionaladventures.feather_axe": "Feather Axe",
@@ -67,6 +90,28 @@
   "item.dimensionaladventures.feather_pickaxe": "Feather Pickaxe",
   "item.dimensionaladventures.feather_shovel": "Feather Shovel",
   "item.dimensionaladventures.feather_sword": "Feather Sword",
+
+
+
+  "block.dimensionaladventures.cobbled_serastone_block": "Cobbled Serastone",
+  "block.dimensionaladventures.cobbled_serastone_slab": "Cobbled Serastone Slab",
+
+  "block.dimensionaladventures.deep_serastone_block": "Seraslate",
+  "block.dimensionaladventures.deep_serastone_slab": "Seraslate Slab",
+
+  "block.dimensionaladventures.mossy_cobbled_serastone_block": "Mossy Cobbled Serastone",
+  "block.dimensionaladventures.mossy_cobbled_serastone_slab": "Mossy Cobbled Serastone Slab",
+
+  "block.dimensionaladventures.mossy_deep_serastone_block": "Mossy Seraslate",
+  "block.dimensionaladventures.mossy_deep_serastone_slab": "Mossy Seraslate Slab",
+
+  "block.dimensionaladventures.mossy_serastone_block": "Mossy Serastone",
+  "block.dimensionaladventures.mossy_serastone_slab": "Mossy Serastone Slab",
+
+  "block.dimensionaladventures.serastone_block": "Serastone",
+  "block.dimensionaladventures.serastone_slab": "Serastone Slab",
+
+
 
   "block.dimensionaladventures.ashbark_log": "Ashbark Log",
   "block.dimensionaladventures.ashbark_planks": "Ashbark Planks",
@@ -88,6 +133,8 @@
   "block.dimensionaladventures.ashbark_sign": "Ashbark Sign",
   "block.dimensionaladventures.ashbark_wall_sign": "Ashbark Wall Sign",
 
+  "block.dimensionaladventures.ashbark_panel": "Ashbark Panel",
+
   "block.dimensionaladventures.red_ashbark_leaves": "Red Ashbark Leaves",
 
   "block.dimensionaladventures.feather_wood_log": "Featherwood Log",
@@ -97,5 +144,18 @@
   "block.dimensionaladventures.stripped_feather_wood": "Stripped Featherwood Wood",
   "block.dimensionaladventures.feather_wood_sapling": "Featherwood Sapling",
   "block.dimensionaladventures.potted_feather_wood_sapling": "Potted Featherwood Sapling",
-  "block.dimensionaladventures.feather_wood_leaves": "Featherwood Leaves"
+  "block.dimensionaladventures.feather_wood_leaves": "Featherwood Leaves",
+
+  "block.dimensionaladventures.feather_wood_door": "Featherwood Door",
+  "block.dimensionaladventures.feather_wood_slab": "Featherwood Slab",
+  "block.dimensionaladventures.feather_wood_pressure_plate": "Featherwood Pressure Plate",
+  "block.dimensionaladventures.feather_wood_fence": "Featherwood Fence",
+  "block.dimensionaladventures.feather_wood_trapdoor": "Featherwood Trapdoor",
+  "block.dimensionaladventures.feather_wood_fence_gate": "Featherwood Fence Gate",
+  "block.dimensionaladventures.feather_wood_stairs": "Featherwood Stairs",
+  "block.dimensionaladventures.feather_wood_button": "Featherwood Button",
+  "block.dimensionaladventures.feather_wood_sign": "Featherwood Sign",
+  "block.dimensionaladventures.feather_wood_wall_sign": "Featherwood Wall Sign",
+
+  "block.dimensionaladventures.feather_wood_panel": "Featherwood Panel"
 }

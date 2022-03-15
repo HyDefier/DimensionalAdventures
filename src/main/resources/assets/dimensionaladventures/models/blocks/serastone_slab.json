@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "dimensionaladventures:blocks/serastone_block",
+    "top": "dimensionaladventures:blocks/serastone_block",
+    "side": "dimensionaladventures:blocks/serastone_block"
+  }
+}

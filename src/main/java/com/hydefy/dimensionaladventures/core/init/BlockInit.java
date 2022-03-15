@@ -11,7 +11,6 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.registries.DeferredRegister;
@@ -59,10 +58,6 @@ public final class BlockInit {
     public static final RegistryObject<Block> CYAN_SMOOTH_FEATHER_BLOCK = BLOCKS.register
             ("cyan_smooth_feather_block",() -> new Block(BlockBehaviour.Properties.of
             (Material.WOOL, MaterialColor.COLOR_CYAN).strength(0.7f).sound(SoundType.WOOL)));
-    public static final RegistryObject<Block> DEEP_SERASTONE_BLOCK = BLOCKS.register
-            ("deep_serastone_block",() -> new Block(BlockBehaviour.Properties.of
-            (Material.STONE, MaterialColor.DEEPSLATE).strength(4.0f, 15.0f)
-            .sound(SoundType.ANCIENT_DEBRIS)));
     public static final RegistryObject<Block> EGGSHELL_BLOCK = BLOCKS.register("eggshell_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.EGG, MaterialColor.QUARTZ)
             .strength(0.9f, 0.5f).sound(SoundType.BONE_BLOCK)));
@@ -111,10 +106,6 @@ public final class BlockInit {
     public static final RegistryObject<Block> RED_SMOOTH_FEATHER_BLOCK = BLOCKS.register
             ("red_smooth_feather_block",() -> new Block(BlockBehaviour.Properties.of
             (Material.WOOL, MaterialColor.COLOR_RED).strength(0.7f).sound(SoundType.WOOL)));
-    public static final RegistryObject<Block> SERASTONE_BLOCK = BLOCKS.register
-            ("serastone_block",() -> new Block(BlockBehaviour.Properties.of
-            (Material.STONE, MaterialColor.COLOR_LIGHT_GRAY).strength(2.1f, 7.0f)
-            .sound(SoundType.DRIPSTONE_BLOCK)));
     public static final RegistryObject<Block> SMOOTH_FEATHER_BLOCK = BLOCKS.register
             ("smooth_feather_block",() -> new Block(BlockBehaviour.Properties.of
             (Material.WOOL, MaterialColor.TERRACOTTA_WHITE).strength(0.7f).sound(SoundType.WOOL)));
@@ -125,17 +116,72 @@ public final class BlockInit {
             ("yellow_smooth_feather_block",() -> new Block(BlockBehaviour.Properties.of
             (Material.WOOL, MaterialColor.GOLD).strength(0.7f).sound(SoundType.WOOL)));
 
+    //STONES
+    public static final RegistryObject<Block> COBBLED_SERASTONE_BLOCK = BLOCKS.register
+            ("cobbled_serastone_block",() -> new Block(BlockBehaviour.Properties.of
+            (Material.STONE, MaterialColor.COLOR_LIGHT_GRAY).strength(2.1f, 7.0f)
+            .sound(SoundType.DRIPSTONE_BLOCK).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> COBBLED_SERASTONE_SLAB = BLOCKS.register
+            ("cobbled_serastone_slab", () -> new SlabBlock(BlockBehaviour.Properties.of
+            (Material.STONE, MaterialColor.COLOR_LIGHT_GRAY).strength(2.1F, 7.0F)
+            .sound(SoundType.DRIPSTONE_BLOCK).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> DEEP_SERASTONE_BLOCK = BLOCKS.register
+            ("deep_serastone_block",() -> new Block(BlockBehaviour.Properties.of
+            (Material.STONE, MaterialColor.DEEPSLATE).strength(4.0f, 30.0f)
+            .sound(SoundType.ANCIENT_DEBRIS).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> DEEP_SERASTONE_SLAB = BLOCKS.register
+            ("deep_serastone_slab", () -> new SlabBlock(BlockBehaviour.Properties.of
+            (Material.STONE, MaterialColor.DEEPSLATE).strength(4.0F, 30.0F)
+            .sound(SoundType.ANCIENT_DEBRIS).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> MOSSY_COBBLED_SERASTONE_BLOCK = BLOCKS.register
+            ("mossy_cobbled_serastone_block",() -> new Block(BlockBehaviour.Properties.of
+            (Material.STONE, MaterialColor.COLOR_LIGHT_GRAY).strength(2.1f, 7.0f)
+            .sound(SoundType.DRIPSTONE_BLOCK).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> MOSSY_COBBLED_SERASTONE_SLAB = BLOCKS.register
+            ("mossy_cobbled_serastone_slab", () -> new SlabBlock(BlockBehaviour.Properties.of
+            (Material.STONE, MaterialColor.COLOR_LIGHT_GRAY).strength(2.1F, 7.0F)
+            .sound(SoundType.DRIPSTONE_BLOCK).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> MOSSY_DEEP_SERASTONE_BLOCK = BLOCKS.register
+            ("mossy_deep_serastone_block",() -> new Block(BlockBehaviour.Properties.of
+            (Material.STONE, MaterialColor.DEEPSLATE).strength(4.0f, 30.0f)
+            .sound(SoundType.ANCIENT_DEBRIS).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> MOSSY_DEEP_SERASTONE_SLAB = BLOCKS.register
+            ("mossy_deep_serastone_slab", () -> new SlabBlock(BlockBehaviour.Properties.of
+            (Material.STONE, MaterialColor.DEEPSLATE).strength(4.0F, 30.0F)
+            .sound(SoundType.ANCIENT_DEBRIS).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> MOSSY_SERASTONE_BLOCK = BLOCKS.register
+            ("mossy_serastone_block",() -> new Block(BlockBehaviour.Properties.of
+            (Material.STONE, MaterialColor.COLOR_LIGHT_GRAY).strength(2.1f, 7.0f)
+            .sound(SoundType.DRIPSTONE_BLOCK).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> MOSSY_SERASTONE_SLAB = BLOCKS.register
+            ("mossy_serastone_slab", () -> new SlabBlock(BlockBehaviour.Properties.of
+            (Material.STONE, MaterialColor.COLOR_LIGHT_GRAY).strength(2.1F, 7.0F)
+            .sound(SoundType.DRIPSTONE_BLOCK).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> SERASTONE_BLOCK = BLOCKS.register
+            ("serastone_block",() -> new Block(BlockBehaviour.Properties.of
+            (Material.STONE, MaterialColor.COLOR_LIGHT_GRAY).strength(2.1f, 7.0f)
+            .sound(SoundType.DRIPSTONE_BLOCK).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> SERASTONE_SLAB = BLOCKS.register
+            ("serastone_slab", () -> new SlabBlock(BlockBehaviour.Properties.of
+            (Material.STONE, MaterialColor.COLOR_LIGHT_GRAY).strength(2.1F, 7.0F)
+            .sound(SoundType.DRIPSTONE_BLOCK).requiresCorrectToolForDrops()));
+
     //WOODS
     public static final RegistryObject<Block> ASHBARK_LOG =  BLOCKS.register("ashbark_log",
             () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
     public static final RegistryObject<Block> ASHBARK_WOOD =  BLOCKS.register("ashbark_wood",
             () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
     public static final RegistryObject<Block> STRIPPED_ASHBARK_LOG =  BLOCKS.register("stripped_ashbark_log",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_DARK_OAK_LOG)));
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
     public static final RegistryObject<Block> STRIPPED_ASHBARK_WOOD =  BLOCKS.register("stripped_ashbark_wood",
             () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
     public static final RegistryObject<Block> ASHBARK_PLANKS =  BLOCKS.register("ashbark_planks",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.CRIMSON_PLANKS)));
     public static final RegistryObject<Block> ASHBARK_LEAVES = BLOCKS.register("ashbark_leaves",
             () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
     public static final RegistryObject<Block> ASHBARK_SAPLING = BLOCKS.register("ashbark_sapling",
@@ -172,12 +218,17 @@ public final class BlockInit {
             WoodButtonBlock(BlockBehaviour.Properties.of(Material.DECORATION).noCollission().strength(0.5F)
             .sound(SoundType.WOOD)));
     public static final RegistryObject<Block> ASHBARK_SIGN = BLOCKS.register("ashbark_sign", () -> new
-            StandingSignBlock(BlockBehaviour.Properties.of(Material.NETHER_WOOD, Blocks.CRIMSON_PLANKS
+            ModStandingSignBlock(BlockBehaviour.Properties.of(Material.NETHER_WOOD, Blocks.CRIMSON_PLANKS
             .defaultMaterialColor()).noCollission().strength(1.0F).sound(SoundType.WOOD), ModWoodType.ASHBARK));
     public static final RegistryObject<Block> ASHBARK_WALL_SIGN = BLOCKS.register("ashbark_wall_sign",
-            () -> new WallSignBlock(BlockBehaviour.Properties.of(Material.NETHER_WOOD, Blocks.CRIMSON_PLANKS
-            .defaultMaterialColor()).noCollission().strength(1.0F).sound(SoundType.WOOD).dropsLike(Blocks.CRIMSON_SIGN)
-            , ModWoodType.ASHBARK));
+            () -> new ModWallSignBlock(BlockBehaviour.Properties.of(Material.NETHER_WOOD, Blocks.CRIMSON_PLANKS
+            .defaultMaterialColor()).noCollission().strength(1.0F).sound(SoundType.WOOD)
+            .dropsLike(ASHBARK_SIGN.get()), ModWoodType.ASHBARK));
+
+    public static final RegistryObject<Block> ASHBARK_PANEL = BLOCKS.register("ashbark_panel",
+            () -> new ModPanelBlock(BlockBehaviour.Properties.of(Material.WOOD, Blocks.CRIMSON_PLANKS
+            .defaultMaterialColor()).strength(3.0F).sound(SoundType.WOOD).noOcclusion()));
+            //.isValidSpawn(Blocks::never)));
     
     public static final RegistryObject<Block> RED_ASHBARK_LEAVES = BLOCKS.register("red_ashbark_leaves",
             () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
@@ -222,4 +273,69 @@ public final class BlockInit {
             });
     public static final RegistryObject<Block> FEATHER_WOOD_SAPLING = BLOCKS.register("feather_wood_sapling",
             () -> new SaplingBlock(new FeatherWoodTreeGrower(), BlockBehaviour.Properties.copy(Blocks.SPRUCE_SAPLING)));
+
+    public static final RegistryObject<Block> FEATHER_WOOD_DOOR = BLOCKS.register("feather_wood_door", () ->
+            new DoorBlock(BlockBehaviour.Properties.of(Material.WOOD, Blocks.OAK_PLANKS.defaultMaterialColor())
+            .strength(3.0F).sound(SoundType.WOOD).noOcclusion()));
+    public static final RegistryObject<Block> FEATHER_WOOD_SLAB = BLOCKS.register("feather_wood_slab", () ->
+            new SlabBlock(BlockBehaviour.Properties.of(Material.WOOD, Blocks.OAK_PLANKS.defaultMaterialColor()).strength
+            (2.0F, 3.0F).sound(SoundType.WOOD)){
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return true;
+                }
+                @Override
+                public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return 60;
+                }
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return 30;
+                }
+            });
+    public static final RegistryObject<Block> FEATHER_WOOD_PRESSURE_PLATE = BLOCKS.register
+            ("feather_wood_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING
+            , BlockBehaviour.Properties.of(Material.WOOD, Blocks.OAK_PLANKS.defaultMaterialColor()).noCollission()
+            .strength(0.5F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> FEATHER_WOOD_FENCE = BLOCKS.register("feather_wood_fence", () ->
+            new FenceBlock(BlockBehaviour.Properties.of(Material.WOOD, Blocks.OAK_PLANKS
+            .defaultMaterialColor()).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> FEATHER_WOOD_TRAPDOOR = BLOCKS.register("feather_wood_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.of(Material.WOOD, Blocks.OAK_PLANKS
+            .defaultMaterialColor()).strength(3.0F).sound(SoundType.WOOD).noOcclusion()));
+            //.isValidSpawn(Blocks::never)));
+    public static final RegistryObject<Block> FEATHER_WOOD_FENCE_GATE = BLOCKS.register("feather_wood_fence_gate"
+            , () ->new FenceGateBlock(BlockBehaviour.Properties.of(Material.WOOD, Blocks.OAK_PLANKS
+            .defaultMaterialColor()).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> FEATHER_WOOD_STAIRS = BLOCKS.register("feather_wood_stairs",
+            () -> new StairBlock(Blocks.OAK_PLANKS.defaultBlockState(), BlockBehaviour.Properties.copy
+            (Blocks.OAK_PLANKS)){
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return true;
+                }
+                @Override
+                public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return 60;
+                }
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return 30;
+                }
+            });
+    public static final RegistryObject<Block> FEATHER_WOOD_BUTTON = BLOCKS.register("feather_wood_button",
+            () -> new WoodButtonBlock(BlockBehaviour.Properties.of(Material.DECORATION).noCollission().strength(0.5F)
+            .sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> FEATHER_WOOD_SIGN = BLOCKS.register("feather_wood_sign", () -> new
+            ModStandingSignBlock(BlockBehaviour.Properties.of(Material.WOOD, Blocks.OAK_PLANKS
+            .defaultMaterialColor()).noCollission().strength(1.0F).sound(SoundType.WOOD), ModWoodType.ASHBARK));
+    public static final RegistryObject<Block> FEATHER_WOOD_WALL_SIGN = BLOCKS.register("feather_wood_wall_sign",
+            () -> new ModWallSignBlock(BlockBehaviour.Properties.of(Material.WOOD, Blocks.OAK_PLANKS
+            .defaultMaterialColor()).noCollission().strength(1.0F).sound(SoundType.WOOD)
+            .dropsLike(FEATHER_WOOD_SIGN.get()), ModWoodType.FEATHER));
+
+    public static final RegistryObject<Block> FEATHER_WOOD_PANEL = BLOCKS.register("feather_wood_panel",
+            () -> new ModPanelBlock(BlockBehaviour.Properties.of(Material.WOOD, Blocks.OAK_PLANKS
+            .defaultMaterialColor()).strength(3.0F).sound(SoundType.WOOD).noOcclusion()));
+            //.isValidSpawn(Blocks::never)));
 }

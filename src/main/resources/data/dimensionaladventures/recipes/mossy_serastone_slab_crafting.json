@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_slab",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "dimensionaladventures:mossy_serastone_block"
+    }
+  },
+  "result": {
+    "item": "dimensionaladventures:mossy_serastone_slab",
+    "count": 6
+  }
+}

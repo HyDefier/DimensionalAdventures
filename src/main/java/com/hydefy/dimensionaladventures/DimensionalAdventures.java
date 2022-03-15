@@ -1,20 +1,44 @@
 package com.hydefy.dimensionaladventures;
 
-import com.hydefy.dimensionaladventures.client.event.ClientModEvents;
+import com.google.common.collect.ImmutableSet;
 import com.hydefy.dimensionaladventures.common.block.ModFluids;
 import com.hydefy.dimensionaladventures.common.block.entity.ModBlockEntities;
-import com.hydefy.dimensionaladventures.core.event.CommonModEvents;
 import com.hydefy.dimensionaladventures.core.init.*;
 import com.hydefy.dimensionaladventures.core.world.biome.SeramaniaBiomes;
-//import com.hydefy.dimensionaladventures.core.world.dimension.ModDimensions;
+import com.hydefy.dimensionaladventures.core.world.features.ModConfiguredFeature;
+import com.hydefy.dimensionaladventures.core.world.features.structures.ModStructures;
 import com.hydefy.dimensionaladventures.core.world.features.trees.ModWoodType;
+import net.minecraft.data.BuiltinRegistries;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.block.state.properties.WoodType;
-import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.world.WorldEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.jetbrains.annotations.NotNull;
+
+import com.google.common.collect.HashMultimap;
+import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.ImmutableMultimap;
+import com.mojang.serialization.Codec;
+import net.minecraft.core.Registry;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.level.chunk.ChunkGenerator;
+import net.minecraft.world.level.levelgen.FlatLevelSource;
+import net.minecraft.world.level.levelgen.StructureSettings;
+import net.minecraft.world.level.levelgen.feature.ConfiguredStructureFeature;
+import net.minecraft.world.level.levelgen.feature.StructureFeature;
+import net.minecraft.world.level.levelgen.feature.configurations.StructureFeatureConfiguration;
+import net.minecraftforge.fml.util.ObfuscationReflectionHelper;
+
+import java.lang.reflect.Method;
+import java.util.HashMap;
+import java.util.Map;
 
 @Mod("dimensionaladventures")
 public class DimensionalAdventures
@@ -74,8 +98,35 @@ public class DimensionalAdventures
         //Unnecessary?
 //        bus.addListener(CommonModEvents::commonSetup);
 //        bus.addListener(ClientModEvents::clientSetup);
-//
-//        // Register self
+
+        // Register self
 //        MinecraftForge.EVENT_BUS.register(this);
+    }
+
+    public void addDimensionalSpacing(final WorldEvent.Load event) {
+        if(event.getWorld() instanceof ServerLevel serverLevel){
+            ChunkGenerator chunkGenerator = serverLevel.getChunkSource().getGenerator();
+
+            if (chunkGenerator instanceof FlatLevelSource && serverLevel.dimension().equals(Level.OVERWORLD)) {
+                return;
+            }
+
+            StructureSettings worldStructureConfig = chunkGenerator.getSettings();
+
+            Map<StructureFeature<?>, StructureFeatureConfiguration> tempMap = new HashMap<>(worldStructureConfig.structureConfig());
+            tempMap.putIfAbsent(ModStructures.LARGE_ROCKS.get(), StructureSettings.DEFAULTS.get(ModStructures.LARGE_ROCKS.get()));
+            worldStructureConfig.structureConfig = tempMap;
+        }
+    }
+
+    /**
+     * Helper method that handles setting up the map to multimap relationship to help prevent issues.
+     */
+    private static void associateBiomeToConfiguredStructure(Map<StructureFeature<?>, HashMultimap<ConfiguredStructureFeature<?, ?>, ResourceKey<Biome>>> STStructureToMultiMap, ConfiguredStructureFeature<?, ?> configuredStructureFeature, ResourceKey<Biome> biomeRegistryKey) {
+        STStructureToMultiMap.putIfAbsent(configuredStructureFeature.feature, HashMultimap.create());
+        HashMultimap<ConfiguredStructureFeature<?, ?>, ResourceKey<Biome>> configuredStructureToBiomeMultiMap = STStructureToMultiMap.get(configuredStructureFeature.feature);
+        if(!(configuredStructureToBiomeMultiMap.containsValue(biomeRegistryKey))) {
+            configuredStructureToBiomeMultiMap.put(configuredStructureFeature, biomeRegistryKey);
+        }
     }
 }

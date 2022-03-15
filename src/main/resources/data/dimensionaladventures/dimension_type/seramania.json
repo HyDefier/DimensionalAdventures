@@ -1,7 +1,7 @@
 {
   "name": "Seramania",
   "ultrawarm": false,
-  "natural": false,
+  "natural": true,
   "coordinate_scale": 0.0238095238,
   "height": 512,
   "min_y": -64,

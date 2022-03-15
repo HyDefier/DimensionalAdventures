@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#X#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "dimensionaladventures:portal_egg"
+    },
+    "X": {
+      "tag": "forge:glass/silica"
+    }
+  },
+  "result": {
+    "item": "dimensionaladventures:portal_box",
+    "count": 1
+  }
+}

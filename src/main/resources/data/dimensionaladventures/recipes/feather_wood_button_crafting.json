@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "wooden_button",
+  "ingredients": [
+    {
+      "item": "dimensionaladventures:feather_wood_planks"
+    }
+  ],
+  "result": {
+    "item": "dimensionaladventures:feather_wood_button"
+  }
+}

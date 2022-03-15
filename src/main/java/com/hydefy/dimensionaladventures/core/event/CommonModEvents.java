@@ -8,6 +8,8 @@ import com.hydefy.dimensionaladventures.common.entity.PortalChicken;
 import com.hydefy.dimensionaladventures.core.init.BlockInit;
 import com.hydefy.dimensionaladventures.core.init.EntityInit;
 import com.hydefy.dimensionaladventures.core.world.OreGeneration;
+import com.hydefy.dimensionaladventures.core.world.features.ModConfiguredFeature;
+import com.hydefy.dimensionaladventures.core.world.features.structures.ModStructures;
 import com.hydefy.dimensionaladventures.core.world.features.trees.ModWoodType;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
@@ -49,6 +51,9 @@ public class CommonModEvents {
             BlockEntityRenderers.register(ModBlockEntities.SIGN_BLOCK_ENTITIES.get(), SignRenderer::new);
             Sheets.addWoodType(ModWoodType.ASHBARK);
             Sheets.addWoodType(ModWoodType.FEATHER);
+
+            ModStructures.setupStructures();
+            ModConfiguredFeature.registerConfiguredStructures();
 
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(BlockInit.ASHBARK_SAPLING.getId(), BlockInit.POTTED_ASHBARK_SAPLING);
 

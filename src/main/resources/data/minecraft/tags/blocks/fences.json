@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "dimensionaladventures:ashbark_fence"
+    "dimensionaladventures:ashbark_fence",
+
+    "dimensionaladventures:feather_wood_fence"
   ]
 }

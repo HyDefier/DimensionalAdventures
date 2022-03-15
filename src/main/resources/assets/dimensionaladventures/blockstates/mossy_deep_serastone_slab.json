@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "dimensionaladventures:blocks/mossy_deep_serastone_slab"
+    },
+    "type=double": {
+      "model": "dimensionaladventures:blocks/mossy_deep_serastone_block"
+    },
+    "type=top": {
+      "model": "dimensionaladventures:blocks/mossy_deep_serastone_slab_top"
+    }
+  }
+}

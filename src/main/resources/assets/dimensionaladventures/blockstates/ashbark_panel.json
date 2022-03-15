@@ -1,0 +1,57 @@
+{
+  "variants": {
+    "facing=up,open=false": {
+      "model": "dimensionaladventures:blocks/ashbark_panel_flat",
+      "x": 180,
+      "y": 90
+    },
+    "facing=up,open=true": {
+      "model": "dimensionaladventures:blocks/ashbark_panel_flat_open",
+      "x": 180,
+      "y": 90
+    },
+
+    "facing=down,open=false": {
+      "model": "dimensionaladventures:blocks/ashbark_panel_flat",
+      "y": 90
+    },
+    "facing=down,open=true": {
+      "model": "dimensionaladventures:blocks/ashbark_panel_flat_open",
+      "y": 90
+    },
+
+    "facing=east,open=false": {
+      "model": "dimensionaladventures:blocks/ashbark_panel_side",
+      "y": 90
+    },
+    "facing=east,open=true": {
+      "model": "dimensionaladventures:blocks/ashbark_panel_side_open",
+      "y": 90
+    },
+
+    "facing=north,open=false": {
+      "model": "dimensionaladventures:blocks/ashbark_panel_side"
+    },
+    "facing=north,open=true": {
+      "model": "dimensionaladventures:blocks/ashbark_panel_side_open"
+    },
+
+    "facing=south,open=false": {
+      "model": "dimensionaladventures:blocks/ashbark_panel_side",
+      "y": 180
+    },
+    "facing=south,open=true": {
+      "model": "dimensionaladventures:blocks/ashbark_panel_side_open",
+      "y": 180
+    },
+
+    "facing=west,open=false": {
+      "model": "dimensionaladventures:blocks/ashbark_panel_side",
+      "y": 270
+    },
+    "facing=west,open=true": {
+      "model": "dimensionaladventures:blocks/ashbark_panel_side_open",
+      "y": 270
+    }
+  }
+}

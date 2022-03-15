@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_fence_gate",
+  "pattern": [
+    "WWW",
+    "W#W",
+    "WWW"
+  ],
+  "key": {
+    "#": {
+      "tag": "dimensionaladventures:feather_wood_logs"
+    },
+    "W": {
+      "item": "dimensionaladventures:feather_wood_planks"
+    }
+  },
+  "result": {
+    "item": "dimensionaladventures:feather_wood_panel",
+    "count": 12
+  }
+}
