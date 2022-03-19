@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "dimensionaladventures:items/iron_feather_shovel"
+  }
+}

@@ -61,8 +61,8 @@ public class PortalChicken extends Animal {
         this.goalSelector.addGoal(7, new RandomLookAroundGoal(this));
     }
 
-    protected float getStandingEyeHeight(Pose p_28251_, EntityDimensions p_28252_) {
-        return this.isBaby() ? p_28252_.height * 0.85F : p_28252_.height * 0.92F;
+    protected float getStandingEyeHeight(Pose pose, EntityDimensions entityDimensions) {
+        return this.isBaby() ? entityDimensions.height * 0.85F : entityDimensions.height * 0.92F;
     }
 
     public static AttributeSupplier.Builder createAttributes() {
@@ -102,7 +102,7 @@ public class PortalChicken extends Animal {
         this.nextFlap = this.flyDist + this.flapSpeed / 2.0F;
     }
 
-    public boolean causeFallDamage(float p_148875_, float p_148876_, DamageSource p_148877_) {
+    public boolean causeFallDamage(float p_148875_, float p_148876_, DamageSource damageSource) {
         return false;
     }
 
@@ -110,7 +110,7 @@ public class PortalChicken extends Animal {
         return SoundEvents.CHICKEN_AMBIENT;
     }
 
-    protected SoundEvent getHurtSound(DamageSource p_28262_) {
+    protected SoundEvent getHurtSound(DamageSource damageSource) {
         return SoundEvents.CHICKEN_HURT;
     }
 
@@ -128,50 +128,50 @@ public class PortalChicken extends Animal {
         return checkAnimalSpawnRules(entity, levelAccess, spawnType, pos, random) && pos.getY() > 50;
     }
 
-    protected void playStepSound(BlockPos p_28254_, BlockState p_28255_) {
+    protected void playStepSound(BlockPos blockPos, BlockState blockState) {
         this.playSound(SoundEvents.CHICKEN_STEP, 0.15F, 1.0F);
     }
 
-    public Chicken getBreedOffspring(ServerLevel p_148884_, AgeableMob p_148885_) {
-        return (Chicken)EntityType.CHICKEN.create(p_148884_);
+    public Chicken getBreedOffspring(ServerLevel serverLevel, AgeableMob ageableMob) {
+        return (Chicken)EntityType.CHICKEN.create(serverLevel);
     }
 
-    public boolean isFood(ItemStack p_28271_) {
-        return FOOD_ITEMS.test(p_28271_);
+    public boolean isFood(ItemStack itemStack) {
+        return FOOD_ITEMS.test(itemStack);
     }
 
-    protected int getExperienceReward(Player p_28259_) {
-        return this.isChickenJockey() ? 10 : super.getExperienceReward(p_28259_);
+    protected int getExperienceReward(Player player) {
+        return this.isChickenJockey() ? 10 : super.getExperienceReward(player);
     }
 
-    public void readAdditionalSaveData(CompoundTag p_28243_) {
-        super.readAdditionalSaveData(p_28243_);
-        this.isChickenJockey = p_28243_.getBoolean("IsChickenJockey");
-        if (p_28243_.contains("EggLayTime")) {
-            this.eggTime = p_28243_.getInt("EggLayTime");
+    public void readAdditionalSaveData(CompoundTag compoundTag) {
+        super.readAdditionalSaveData(compoundTag);
+        this.isChickenJockey = compoundTag.getBoolean("IsChickenJockey");
+        if (compoundTag.contains("EggLayTime")) {
+            this.eggTime = compoundTag.getInt("EggLayTime");
         }
 
     }
 
-    public void addAdditionalSaveData(CompoundTag p_28257_) {
-        super.addAdditionalSaveData(p_28257_);
-        p_28257_.putBoolean("IsChickenJockey", this.isChickenJockey);
-        p_28257_.putInt("EggLayTime", this.eggTime);
+    public void addAdditionalSaveData(CompoundTag compoundTag) {
+        super.addAdditionalSaveData(compoundTag);
+        compoundTag.putBoolean("IsChickenJockey", this.isChickenJockey);
+        compoundTag.putInt("EggLayTime", this.eggTime);
     }
 
     public boolean removeWhenFarAway(double p_28266_) {
         return this.isChickenJockey();
     }
 
-    public void positionRider(Entity p_28269_) {
-        super.positionRider(p_28269_);
+    public void positionRider(Entity entity) {
+        super.positionRider(entity);
         float $$1 = Mth.sin(this.yBodyRot * 0.017453292F);
         float $$2 = Mth.cos(this.yBodyRot * 0.017453292F);
         float $$3 = 0.1F;
         float $$4 = 0.0F;
-        p_28269_.setPos(this.getX() + (double)(0.1F * $$1), this.getY(0.5D) + p_28269_.getMyRidingOffset() + 0.0D, this.getZ() - (double)(0.1F * $$2));
-        if (p_28269_ instanceof LivingEntity) {
-            ((LivingEntity)p_28269_).yBodyRot = this.yBodyRot;
+        entity.setPos(this.getX() + (double)(0.1F * $$1), this.getY(0.5D) + entity.getMyRidingOffset() + 0.0D, this.getZ() - (double)(0.1F * $$2));
+        if (entity instanceof LivingEntity) {
+            ((LivingEntity)entity).yBodyRot = this.yBodyRot;
         }
 
     }
@@ -185,6 +185,6 @@ public class PortalChicken extends Animal {
     }
 
     static {
-        FOOD_ITEMS = Ingredient.of(new ItemLike[]{Items.WHEAT_SEEDS, Items.MELON_SEEDS, Items.PUMPKIN_SEEDS, Items.BEETROOT_SEEDS});
+        FOOD_ITEMS = Ingredient.of(Items.WHEAT_SEEDS, Items.MELON_SEEDS, Items.PUMPKIN_SEEDS, Items.BEETROOT_SEEDS, ItemInit.GIZZARD_SEEDS.get());
     }
 }

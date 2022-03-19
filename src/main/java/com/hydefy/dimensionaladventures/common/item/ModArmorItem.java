@@ -7,16 +7,30 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
+import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.material.Fluid;
+import net.minecraft.world.level.material.WaterFluid;
 
 import java.util.Map;
 
 public class ModArmorItem extends ArmorItem {
     private static final Map<ArmorMaterial, MobEffectInstance> MATERIAL_TO_EFFECT_MAP =
-            (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>())
-            .put(ArmorMaterialInit.FEATHER,
-            new MobEffectInstance(MobEffects.SLOW_FALLING, 1, 1, true, false, false))
+            (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>()).put
+            (ArmorMaterialInit.FEATHER, new MobEffectInstance(MobEffects.SLOW_FALLING,
+            1, 0, true, false, false)).put(
+
+            ArmorMaterialInit.FEATHER_CONE, new MobEffectInstance(MobEffects.REGENERATION,
+            1, 0, true, false, false))
+//                    .put(
+//
+//            ArmorMaterialInit.IRON_FEATHER, new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE,
+//            1, 0, true, false, false)).put(
+//
+//            ArmorMaterialInit.IRON_FEATHER, new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN,
+//            1, 0, true, false, false))
             .build();
+
 
     public ModArmorItem(ArmorMaterial material, EquipmentSlot slot, Properties settings) {
         super(material, slot, settings);
@@ -26,9 +40,36 @@ public class ModArmorItem extends ArmorItem {
     public void onArmorTick(ItemStack stack, Level world, Player player) {
         if(!world.isClientSide()) {
             if(hasFullSuitOfArmorOn(player)) {
-                evaluateArmorEffectsFeatherFalling(player, true);
+                ItemStack boots = player.getInventory().getArmor(0);
+                if (!((boots.getItem().getClass() == ArmorItem.class) || (boots.getItem().getClass() == ModArmorItem.class)))
+                    return; //REACTION FAILED
+                ArmorItem bootsItem = ((ArmorItem)boots.getItem());
+                ArmorMaterial material = bootsItem.getMaterial();
+                if (material == ArmorMaterialInit.FEATHER) {
+                    evaluateArmorEffectsFeatherFalling(player, true);
+                } else if (material == ArmorMaterialInit.FEATHER_CONE){
+                    evaluateArmorEffects(player, false);
+                } else if (material == ArmorMaterialInit.IRON_FEATHER){
+                    evaluateArmorEffectsTank(player, false);
+                }
             }
         }
+    }
+
+    private void evaluateArmorEffectsTank(Player player, boolean allowWings) {
+        if(hasCorrectArmorOn(ArmorMaterialInit.IRON_FEATHER, player, allowWings)) {
+            if (player.isCrouching()) {
+                player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 1, 0));
+                player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 1, 0));
+//                player.canStandOnFluid(WaterFluid);
+            }
+        }
+//        for (Map.Entry<ArmorMaterial, MobEffectInstance> entry : MATERIAL_TO_EFFECT_MAP.entrySet()) {
+//            ArmorMaterial mapArmorMaterial = entry.getKey();
+//            //MobEffectInstance mapStatusEffect = entry.getValue();
+//
+//
+//        }
     }
 
     private void evaluateArmorEffectsFeatherFalling(Player player, boolean allowWings) {

@@ -137,7 +137,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:feather",
+          "name": "dimensionaladventures:feather_cone",
           "conditions": [
             {
               "condition": "minecraft:survives_explosion"
@@ -146,11 +146,11 @@
               "condition": "minecraft:table_bonus",
               "enchantment": "minecraft:fortune",
               "chances": [
-                0.005,
-                0.0055555557,
-                0.00625,
-                0.008333334,
-                0.025
+                0.05,
+                0.055555557,
+                0.0625,
+                0.08333334,
+                0.25
               ]
             }
           ]

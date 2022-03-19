@@ -13,8 +13,9 @@ import net.minecraft.client.model.geom.builders.MeshDefinition;
 import net.minecraft.client.model.geom.builders.PartDefinition;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
+import net.minecraft.world.entity.Entity;
 
-public class PortalChickenModel <Type extends PortalChicken> extends AgeableListModel<Type> {
+public class PortalChickenModel <Type extends Entity> extends AgeableListModel<Type> {
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation(DimensionalAdventures.MODID, "portal_chicken"), "main");
 
     public static final String RED_THING = "red_thing";

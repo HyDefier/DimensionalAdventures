@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:golden_shovel"
+  },
+  "addition": {
+    "item": "dimensionaladventures:iron_feather_ingot"
+  },
+  "result": {
+    "item": "dimensionaladventures:iron_feather_shovel"
+  }
+}

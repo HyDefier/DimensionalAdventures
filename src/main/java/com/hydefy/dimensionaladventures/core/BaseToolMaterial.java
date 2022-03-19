@@ -1,5 +1,6 @@
 package com.hydefy.dimensionaladventures.core;
 
+import net.minecraft.util.LazyLoadedValue;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
 
@@ -11,13 +12,13 @@ public class BaseToolMaterial implements Tier {
     private final int enchantability, harvestLevel, durability;
     private final Supplier<Ingredient> repairMaterial;
 
-    public BaseToolMaterial(float attackDamageBonus, int enchantability, int harvestLevel, float speed,
-                            int durability, Supplier<Ingredient> repairMaterial) {
+    public BaseToolMaterial(int harvestLevel, int durability, float speed, float attackDamageBonus, int enchantability,
+                             Supplier<Ingredient> repairMaterial) {
+        this.harvestLevel = harvestLevel;
+        this.durability = durability;
+        this.speed = speed;
         this.attackDamageBonus = attackDamageBonus;
         this.enchantability = enchantability;
-        this.harvestLevel = harvestLevel;
-        this.speed = speed;
-        this.durability = durability;
         this.repairMaterial = repairMaterial;
     }
 

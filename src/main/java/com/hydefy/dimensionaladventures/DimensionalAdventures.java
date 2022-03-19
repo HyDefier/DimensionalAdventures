@@ -1,17 +1,12 @@
 package com.hydefy.dimensionaladventures;
 
-import com.google.common.collect.ImmutableSet;
 import com.hydefy.dimensionaladventures.common.block.ModFluids;
 import com.hydefy.dimensionaladventures.common.block.entity.ModBlockEntities;
 import com.hydefy.dimensionaladventures.core.init.*;
 import com.hydefy.dimensionaladventures.core.world.biome.SeramaniaBiomes;
-import com.hydefy.dimensionaladventures.core.world.features.ModConfiguredFeature;
-import com.hydefy.dimensionaladventures.core.world.features.structures.ModStructures;
 import com.hydefy.dimensionaladventures.core.world.features.trees.ModWoodType;
-import net.minecraft.data.BuiltinRegistries;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraftforge.event.world.WorldEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -19,8 +14,6 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.jetbrains.annotations.NotNull;
 
 import com.google.common.collect.HashMultimap;
-import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.ImmutableMultimap;
 import com.mojang.serialization.Codec;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceKey;
@@ -33,11 +26,9 @@ import net.minecraft.world.level.levelgen.FlatLevelSource;
 import net.minecraft.world.level.levelgen.StructureSettings;
 import net.minecraft.world.level.levelgen.feature.ConfiguredStructureFeature;
 import net.minecraft.world.level.levelgen.feature.StructureFeature;
-import net.minecraft.world.level.levelgen.feature.configurations.StructureFeatureConfiguration;
 import net.minecraftforge.fml.util.ObfuscationReflectionHelper;
 
 import java.lang.reflect.Method;
-import java.util.HashMap;
 import java.util.Map;
 
 @Mod("dimensionaladventures")
@@ -74,7 +65,7 @@ public class DimensionalAdventures
     public static final CreativeModeTab RUINED_TECHNOLOGY_TAB = new CreativeModeTab(MODID + "_ruined_technology") {
         @Override @NotNull
         public ItemStack makeIcon() {
-            return ItemInit.STEEL_SCRAP.get().getDefaultInstance();
+            return ItemInit.STEEL_SCRAP_ITEM.get().getDefaultInstance();
         }
     };
 
@@ -103,19 +94,29 @@ public class DimensionalAdventures
 //        MinecraftForge.EVENT_BUS.register(this);
     }
 
+    private static Method GETCODEC_METHOD;
     public void addDimensionalSpacing(final WorldEvent.Load event) {
-        if(event.getWorld() instanceof ServerLevel serverLevel){
+        if(event.getWorld() instanceof ServerLevel serverLevel) {
             ChunkGenerator chunkGenerator = serverLevel.getChunkSource().getGenerator();
 
+            // Skip superflat worlds to prevent issues with it. Plus, users don't want structures clogging up their superflat worlds.
             if (chunkGenerator instanceof FlatLevelSource && serverLevel.dimension().equals(Level.OVERWORLD)) {
                 return;
             }
 
             StructureSettings worldStructureConfig = chunkGenerator.getSettings();
 
-            Map<StructureFeature<?>, StructureFeatureConfiguration> tempMap = new HashMap<>(worldStructureConfig.structureConfig());
-            tempMap.putIfAbsent(ModStructures.LARGE_ROCKS.get(), StructureSettings.DEFAULTS.get(ModStructures.LARGE_ROCKS.get()));
-            worldStructureConfig.structureConfig = tempMap;
+
+            try {
+                if(GETCODEC_METHOD == null) GETCODEC_METHOD = ObfuscationReflectionHelper.findMethod(ChunkGenerator.class, "codec");
+                ResourceLocation cgRL = Registry.CHUNK_GENERATOR.getKey((Codec<? extends ChunkGenerator>) GETCODEC_METHOD.invoke(chunkGenerator));
+                if(cgRL != null && cgRL.getNamespace().equals("terraforged")) return;
+            }
+            catch(Exception ignored){}
+
+//            Map<StructureFeature<?>, StructureFeatureConfiguration> tempMap = new HashMap<>(worldStructureConfig.structureConfig());
+//            tempMap.putIfAbsent(STStructures.RUN_DOWN_HOUSE.get(), StructureSettings.DEFAULTS.get(STStructures.RUN_DOWN_HOUSE.get()));
+//            worldStructureConfig.structureConfig = tempMap;
         }
     }
 

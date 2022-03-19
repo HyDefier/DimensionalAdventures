@@ -74,6 +74,8 @@ import java.util.function.Supplier;
 //}
 public class OreGeneration {
 
+    public static final List<PlacedFeature> SERAMANIA_ORES = new ArrayList<>();
+
     public static final List<PlacedFeature> OVERWORLD_ORES = new ArrayList<>();
     public static final List<PlacedFeature> END_ORES = new ArrayList<>();
     public static final List<PlacedFeature> NETHER_ORES = new ArrayList<>();

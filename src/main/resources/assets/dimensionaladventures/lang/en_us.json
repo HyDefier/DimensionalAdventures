@@ -14,6 +14,21 @@
   "item.dimensionaladventures.feather_leggings": "Feather Leggings",
   "item.dimensionaladventures.feather_boots": "Feather Boots",
 
+  "item.dimensionaladventures.feather_cone_helmet": "Feathercone Hat",
+  "item.dimensionaladventures.feather_cone_chestplate": "Feathercone Shirt",
+  "item.dimensionaladventures.feather_cone_leggings": "Feathercone Pants",
+  "item.dimensionaladventures.feather_cone_boots": "Feathercone Slides",
+
+  "item.dimensionaladventures.feather_hide_helmet": "Featherhide Cap",
+  "item.dimensionaladventures.feather_hide_chestplate": "Featherhide Cloak",
+  "item.dimensionaladventures.feather_hide_leggings": "Featherhide Slacks",
+  "item.dimensionaladventures.feather_hide_boots": "Featherhide Shoes",
+
+  "item.dimensionaladventures.iron_feather_helmet": "Ironfeather Helmet",
+  "item.dimensionaladventures.iron_feather_chestplate": "Ironfeather Chestplate",
+  "item.dimensionaladventures.iron_feather_leggings": "Ironfeather Leggings",
+  "item.dimensionaladventures.iron_feather_boots": "Ironfeather Boots",
+
 
 
   "block.dimensionaladventures.black_smooth_feather_block": "Black Smooth Feather Block",
@@ -63,17 +78,24 @@
 
 
 
+  "item.dimensionaladventures.chiko_spawn_egg": "Spawn Chiko",
   "item.dimensionaladventures.featherer_spawn_egg": "Spawn Featherer",
   "item.dimensionaladventures.portal_chicken_spawn_egg": "Spawn Portal Chicken",
 
 
 
+  "entity.dimensionaladventures.chiko": "Chiko",
   "entity.dimensionaladventures.featherer": "Featherer",
   "entity.dimensionaladventures.portal_chicken": "Portal Chicken",
 
 
 
   "item.dimensionaladventures.broken_eggshell": "Eggshell Bits",
+  "item.dimensionaladventures.feather_cone": "Feathercone",
+  "item.dimensionaladventures.feather_hide": "Featherhide",
+  "item.dimensionaladventures.iron_feather": "Ironfeather",
+  "item.dimensionaladventures.iron_feather_ingot": "Ironfeather Ingot",
+  "item.dimensionaladventures.iron_feather_nugget": "Ironfeather Nugget",
   "item.dimensionaladventures.portal_egg": "Portal Egg",
   "item.dimensionaladventures.red_egg": "Red Egg",
   "item.dimensionaladventures.steel_scrap": "Steel Scrap",
@@ -85,11 +107,24 @@
 
 
   "item.dimensionaladventures.eggshell_bucket": "Eggshell Bucket",
+
   "item.dimensionaladventures.feather_axe": "Feather Axe",
   "item.dimensionaladventures.feather_hoe": "Feather Hoe",
   "item.dimensionaladventures.feather_pickaxe": "Feather Pickaxe",
   "item.dimensionaladventures.feather_shovel": "Feather Shovel",
   "item.dimensionaladventures.feather_sword": "Feather Sword",
+
+  "item.dimensionaladventures.feather_cone_axe": "Feathercone Axe",
+  "item.dimensionaladventures.feather_cone_hoe": "Feathercone Hoe",
+  "item.dimensionaladventures.feather_cone_pickaxe": "Feathercone Pickaxe",
+  "item.dimensionaladventures.feather_cone_shovel": "Feathercone Shovel",
+  "item.dimensionaladventures.feather_cone_sword": "Feathercone Macana",
+
+  "item.dimensionaladventures.iron_feather_axe": "Ironfeather Axe",
+  "item.dimensionaladventures.iron_feather_hoe": "Ironfeather Hoe",
+  "item.dimensionaladventures.iron_feather_pickaxe": "Ironfeather Pickaxe",
+  "item.dimensionaladventures.iron_feather_shovel": "Ironfeather Shovel",
+  "item.dimensionaladventures.iron_feather_sword": "Ironfeather Sword",
 
 
 

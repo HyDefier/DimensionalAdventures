@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "dimensionaladventures:serastone_block"
+  },
+  "addition": {
+    "item": "minecraft:dirt"
+  },
+  "result": {
+    "item": "minecraft:stone"
+  }
+}

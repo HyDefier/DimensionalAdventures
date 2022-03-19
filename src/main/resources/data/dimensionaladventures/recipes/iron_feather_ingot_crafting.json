@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "dimensionaladventures:iron_feather_nugget"
+    }
+  },
+  "result": {
+    "item": "dimensionaladventures:iron_feather_ingot",
+    "count": 1
+  }
+}

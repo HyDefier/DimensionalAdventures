@@ -32,6 +32,8 @@ public final class BlockInit {
             ("steel_scrap_block", () -> new SteelScrapBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL,
             MaterialColor.TERRACOTTA_BLACK).strength(0.5f, 1.5f)
             .requiresCorrectToolForDrops().sound(SoundType.NETHERRACK)));
+    public static final RegistryObject<Block> TELEPORTER_BLOCK = BLOCKS.register("teleporter_block",
+            () -> new TeleporterBlock(BlockBehaviour.Properties.of(Material.METAL)));
 
     //BLOCK ENTITY BLOCKS
     public static final RegistryObject<FeathererEggBlock> FEATHERER_EGG_BLOCK = BLOCKS.register

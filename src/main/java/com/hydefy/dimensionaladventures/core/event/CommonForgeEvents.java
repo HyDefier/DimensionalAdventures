@@ -28,6 +28,20 @@ public class CommonForgeEvents {
             event.getSpawns().addSpawn(MobCategory.CREATURE,
                     new SpawnerData(EntityInit.PORTAL_CHICKEN.get(), 50, 1, 2));
         }
+
+        if (event.getName().equals(new ResourceLocation("dimensionaladventures:feather_fields"))) {
+            event.getSpawns().addSpawn(MobCategory.CREATURE,
+                    new SpawnerData(EntityInit.CHIKO.get(), 5000, 8, 32));
+        }
+
+        if (event.getName().equals(new ResourceLocation("dimensionaladventures:feather_fields"))
+            ||event.getName().equals(new ResourceLocation("dimensionaladventures:fire_fields"))
+            ||event.getName().equals(new ResourceLocation("dimensionaladventures:flooded_fields"))
+            ||event.getName().equals(new ResourceLocation("dimensionaladventures:frozen_fields"))
+            ||event.getName().equals(new ResourceLocation("dimensionaladventures:faded_fields"))) {
+            event.getSpawns().addSpawn(MobCategory.CREATURE,
+                    new SpawnerData(EntityInit.FEATHERER.get(), 50, 1, 3));
+        }
     }
 
 //    @SubscribeEvent

@@ -5,8 +5,10 @@ import com.hydefy.dimensionaladventures.core.init.ItemInit;
 import com.hydefy.dimensionaladventures.core.world.features.ModDefaultFeatures;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.data.worldgen.BiomeDefaultFeatures;
+import net.minecraft.data.worldgen.placement.MiscOverworldPlacements;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.biome.*;
+import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -22,8 +24,9 @@ public class SeramaniaBiomes {
     private static Biome createFadedFields() {
         MobSpawnSettings.Builder spawnSettings = new MobSpawnSettings.Builder();
         BiomeDefaultFeatures.endSpawns(spawnSettings);
-        BiomeDefaultFeatures.farmAnimals(spawnSettings);
-        BiomeDefaultFeatures.monsters(spawnSettings, 95, 5, 100, true);
+//        BiomeDefaultFeatures.caveSpawns(spawnSettings);
+
+        ModDefaultFeatures.illagerSpawns(spawnSettings);
 
         BiomeGenerationSettings.Builder generationSettings = new BiomeGenerationSettings.Builder();
         BiomeDefaultFeatures.addDefaultUndergroundVariety(generationSettings);
@@ -32,7 +35,7 @@ public class SeramaniaBiomes {
         BiomeDefaultFeatures.addDefaultOres(generationSettings);
         BiomeDefaultFeatures.addDefaultSoftDisks(generationSettings);
         BiomeDefaultFeatures.addDefaultSprings(generationSettings);
-        return (new Biome.BiomeBuilder()).precipitation(Biome.Precipitation.SNOW).biomeCategory(Biome.BiomeCategory.PLAINS)
+        return (new Biome.BiomeBuilder()).precipitation(Biome.Precipitation.SNOW).biomeCategory(Biome.BiomeCategory.THEEND)
                 .temperature(0.8F).downfall(0.4F)
                 .specialEffects((new BiomeSpecialEffects.Builder())
                         .waterColor(0xA8CAC5).waterFogColor(0xD3E4E2)
@@ -48,17 +51,18 @@ public class SeramaniaBiomes {
     private static Biome createFeatherFields() {
         MobSpawnSettings.Builder spawnSettings = new MobSpawnSettings.Builder();
         BiomeDefaultFeatures.endSpawns(spawnSettings);
-        BiomeDefaultFeatures.farmAnimals(spawnSettings);
-        BiomeDefaultFeatures.monsters(spawnSettings, 95, 5, 100, true);
+//        BiomeDefaultFeatures.plainsSpawns(spawnSettings);
+
+        ModDefaultFeatures.illagerSpawns(spawnSettings);
 
         BiomeGenerationSettings.Builder generationSettings = new BiomeGenerationSettings.Builder();
         BiomeDefaultFeatures.addDefaultUndergroundVariety(generationSettings);
         BiomeDefaultFeatures.addDefaultCarversAndLakes(generationSettings);
 
         ModDefaultFeatures.addModFeatherwoodTrees(generationSettings);
-//        BiomeDefaultFeatures.addDefaultOres(generationSettings);
-//        BiomeDefaultFeatures.addDefaultSoftDisks(generationSettings);
-//        BiomeDefaultFeatures.addDefaultSprings(generationSettings);
+        BiomeDefaultFeatures.addDefaultOres(generationSettings);
+        BiomeDefaultFeatures.addDefaultSoftDisks(generationSettings);
+        BiomeDefaultFeatures.addDefaultSprings(generationSettings);
         return (new Biome.BiomeBuilder()).precipitation(Biome.Precipitation.RAIN).biomeCategory(Biome.BiomeCategory.PLAINS)
                 .temperature(0.8F).downfall(0.4F)
                 .specialEffects((new BiomeSpecialEffects.Builder())
@@ -74,8 +78,7 @@ public class SeramaniaBiomes {
 
     private static Biome createFireFields() {
         MobSpawnSettings.Builder spawnSettings = new MobSpawnSettings.Builder();
-//        BiomeDefaultFeatures.farmAnimals(spawnSettings);
-//        BiomeDefaultFeatures.monsters(spawnSettings, 95, 5, 100, true);
+//        BiomeDefaultFeatures.desertSpawns(spawnSettings);
 
         BiomeGenerationSettings.Builder generationSettings = new BiomeGenerationSettings.Builder();
         BiomeDefaultFeatures.addDefaultUndergroundVariety(generationSettings);
@@ -102,8 +105,8 @@ public class SeramaniaBiomes {
     private static Biome createFloodedFields() {
         MobSpawnSettings.Builder spawnSettings = new MobSpawnSettings.Builder();
         BiomeDefaultFeatures.endSpawns(spawnSettings);
-        BiomeDefaultFeatures.farmAnimals(spawnSettings);
-        BiomeDefaultFeatures.monsters(spawnSettings, 95, 5, 100, true);
+        ModDefaultFeatures.illagerSpawns(spawnSettings);
+        ModDefaultFeatures.drownedSpawns(spawnSettings);
 
         BiomeGenerationSettings.Builder generationSettings = new BiomeGenerationSettings.Builder();
         BiomeDefaultFeatures.addDefaultUndergroundVariety(generationSettings);
@@ -128,18 +131,28 @@ public class SeramaniaBiomes {
     private static Biome createFrozenFields() {
         MobSpawnSettings.Builder spawnSettings = new MobSpawnSettings.Builder();
         BiomeDefaultFeatures.endSpawns(spawnSettings);
-        BiomeDefaultFeatures.farmAnimals(spawnSettings);
-        BiomeDefaultFeatures.monsters(spawnSettings, 95, 5, 100, true);
+        BiomeDefaultFeatures.snowySpawns(spawnSettings);
+        ModDefaultFeatures.illagerSpawns(spawnSettings);
+
+
 
         BiomeGenerationSettings.Builder generationSettings = new BiomeGenerationSettings.Builder();
         BiomeDefaultFeatures.addDefaultUndergroundVariety(generationSettings);
         BiomeDefaultFeatures.addDefaultCarversAndLakes(generationSettings);
 
+        BiomeDefaultFeatures.addFrozenSprings(generationSettings);
+        BiomeDefaultFeatures.addIcebergs(generationSettings);
+        BiomeDefaultFeatures.addBlueIce(generationSettings);
+        BiomeDefaultFeatures.addSurfaceFreezing(generationSettings);
+
+        BiomeDefaultFeatures.addTaigaTrees(generationSettings);
         ModDefaultFeatures.addModFeatherwoodTrees(generationSettings);
+
         BiomeDefaultFeatures.addDefaultOres(generationSettings);
+
         BiomeDefaultFeatures.addDefaultSoftDisks(generationSettings);
         BiomeDefaultFeatures.addDefaultSprings(generationSettings);
-        return (new Biome.BiomeBuilder()).precipitation(Biome.Precipitation.RAIN).biomeCategory(Biome.BiomeCategory.PLAINS)
+        return (new Biome.BiomeBuilder()).precipitation(Biome.Precipitation.SNOW).biomeCategory(Biome.BiomeCategory.ICY)
                 .temperature(0.8F).downfall(0.4F)
                 .specialEffects((new BiomeSpecialEffects.Builder())
                         .waterColor(0x36D5FC).waterFogColor(0xFFFFFF)
@@ -152,4 +165,5 @@ public class SeramaniaBiomes {
     public static void register(IEventBus eventBus) {
         BIOMES.register(eventBus);
     }
+
 }

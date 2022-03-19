@@ -1,8 +1,10 @@
 package com.hydefy.dimensionaladventures.client.event;
 
 import com.hydefy.dimensionaladventures.DimensionalAdventures;
+import com.hydefy.dimensionaladventures.client.renderer.ChikoRenderer;
 import com.hydefy.dimensionaladventures.client.renderer.FeathererRenderer;
 import com.hydefy.dimensionaladventures.client.renderer.PortalChickenRenderer;
+import com.hydefy.dimensionaladventures.client.renderer.model.ChikoModel;
 import com.hydefy.dimensionaladventures.client.renderer.model.FeathererModel;
 import com.hydefy.dimensionaladventures.client.renderer.model.PortalChickenModel;
 import com.hydefy.dimensionaladventures.common.block.ModFluids;
@@ -57,12 +59,14 @@ public final class ClientModEvents {
 
     @SubscribeEvent
     public static void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
+        event.registerLayerDefinition(ChikoModel.LAYER_LOCATION, ChikoModel::createBodyLayer);
         event.registerLayerDefinition(FeathererModel.LAYER_LOCATION, FeathererModel::createBodyLayer);
         event.registerLayerDefinition(PortalChickenModel.LAYER_LOCATION, PortalChickenModel::createBodyLayer);
     }
 
     @SubscribeEvent
     public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
+        event.registerEntityRenderer(EntityInit.CHIKO.get(), ChikoRenderer::new);
         event.registerEntityRenderer(EntityInit.FEATHERER.get(), FeathererRenderer::new);
         event.registerEntityRenderer(EntityInit.PORTAL_CHICKEN.get(), PortalChickenRenderer::new);
     }

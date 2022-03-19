@@ -1,6 +1,7 @@
 package com.hydefy.dimensionaladventures.core.init;
 
 import com.hydefy.dimensionaladventures.DimensionalAdventures;
+import com.hydefy.dimensionaladventures.common.entity.Chiko;
 import com.hydefy.dimensionaladventures.common.entity.Featherer;
 import com.hydefy.dimensionaladventures.common.entity.PortalChicken;
 import com.hydefy.dimensionaladventures.common.entity.SeatEntity;
@@ -21,16 +22,20 @@ public final class EntityInit {
 
     //width, height
 
-    public static final RegistryObject<EntityType<Featherer>>     FEATHERER      = ENTITIES.register
-            ("featherer",      () -> EntityType.Builder.of(Featherer::new    , MobCategory.CREATURE).sized
+    public static final RegistryObject<EntityType<Chiko>> CHIKO = ENTITIES.register
+            ("chiko", () -> EntityType.Builder.of(Chiko::new, MobCategory.CREATURE).sized
+            (0.9F, 1.4F).build(new ResourceLocation(DimensionalAdventures.MODID,
+            "chiko").toString()));
+    public static final RegistryObject<EntityType<Featherer>> FEATHERER = ENTITIES.register
+            ("featherer", () -> EntityType.Builder.of(Featherer::new, MobCategory.CREATURE).sized
             (0.6f, 0.6f).build(new ResourceLocation(DimensionalAdventures.MODID,
             "featherer").toString()));
     public static final RegistryObject<EntityType<PortalChicken>> PORTAL_CHICKEN = ENTITIES.register
             ("portal_chicken", () -> EntityType.Builder.of(PortalChicken::new, MobCategory.CREATURE).sized
             (0.5f, 0.7f).build(new ResourceLocation(DimensionalAdventures.MODID,
             "portal_chicken").toString()));
-    public static final RegistryObject<EntityType<Entity>>        SEAT_ENTITY    = ENTITIES.register
-            ("seat_entity",    () -> EntityType.Builder.of(SeatEntity::new   , MobCategory.MISC   ).sized
+    public static final RegistryObject<EntityType<Entity>> SEAT_ENTITY = ENTITIES.register
+            ("seat_entity", () -> EntityType.Builder.of(SeatEntity::new, MobCategory.MISC).sized
             (0.6f, 0.6f).build(new ResourceLocation(DimensionalAdventures.MODID,
             "seat_entity").toString()));
 }

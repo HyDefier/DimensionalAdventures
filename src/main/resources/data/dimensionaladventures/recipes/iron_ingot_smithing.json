@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "dimensionaladventures:iron_feather_ingot"
+  },
+  "addition": {
+    "item": "dimensionaladventures:serastone_block"
+  },
+  "result": {
+    "item": "minecraft:iron_ingot"
+  }
+}

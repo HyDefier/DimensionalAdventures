@@ -20,8 +20,6 @@ public final class ItemInit {
 
     private ItemInit() {}
 
-    //TODO add Vulnerability potion effect opposite of resistance
-
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS,
             DimensionalAdventures.MODID);
 
@@ -32,7 +30,7 @@ public final class ItemInit {
     public static final RegistryObject<BlockItem> HEALING_STATION_BLOCK_ITEM = ITEMS.register
             ("healing_station_block", () -> new BlockItem(BlockInit.HEALING_STATION.get(),
             new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
-    public static final RegistryObject<BlockItem> STEEL_SCRAP_ITEM = ITEMS.register
+    public static final RegistryObject<BlockItem> STEEL_SCRAP_BLOCK_ITEM = ITEMS.register
             ("steel_scrap_block", () -> new BlockItem(BlockInit.STEEL_SCRAP_BLOCK.get(),
             new Item.Properties().tab(DimensionalAdventures.RUINED_TECHNOLOGY_TAB)));
 
@@ -40,24 +38,58 @@ public final class ItemInit {
     public static final RegistryObject<PortalBoxItem> PORTAL_BOX_ITEM = ITEMS.register("portal_box", () ->
             new PortalBoxItem(new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB).stacksTo(1)));
 
-    //TODO feather falling effect to boots alone instead of set bonus?
-    //TODO edit armor model for boots to add wings
     //ARMOR
     public static final RegistryObject<ArmorItem> FEATHER_HELMET = ITEMS.register("feather_helmet",
             () -> new ArmorItem(ArmorMaterialInit.FEATHER, EquipmentSlot.HEAD,
             new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
-
     public static final RegistryObject<ArmorItem> FEATHER_CHESTPLATE = ITEMS.register("feather_chestplate",
             () -> new ArmorItem(ArmorMaterialInit.FEATHER, EquipmentSlot.CHEST,
             new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
-
     public static final RegistryObject<ArmorItem> FEATHER_LEGGINGS = ITEMS.register("feather_leggings",
             () -> new ArmorItem(ArmorMaterialInit.FEATHER, EquipmentSlot.LEGS,
             new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
-
     public static final RegistryObject<ModArmorItem> FEATHER_BOOTS = ITEMS.register("feather_boots",
             () -> new ModArmorItem(ArmorMaterialInit.FEATHER, EquipmentSlot.FEET,
             new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
+
+    public static final RegistryObject<ArmorItem> FEATHER_CONE_HELMET = ITEMS.register("feather_cone_helmet",
+            () -> new ArmorItem(ArmorMaterialInit.FEATHER_CONE, EquipmentSlot.HEAD,
+            new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
+    public static final RegistryObject<ArmorItem> FEATHER_CONE_CHESTPLATE = ITEMS.register("feather_cone_chestplate",
+            () -> new ArmorItem(ArmorMaterialInit.FEATHER_CONE, EquipmentSlot.CHEST,
+            new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
+    public static final RegistryObject<ArmorItem> FEATHER_CONE_LEGGINGS = ITEMS.register("feather_cone_leggings",
+            () -> new ArmorItem(ArmorMaterialInit.FEATHER_CONE, EquipmentSlot.LEGS,
+            new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
+    public static final RegistryObject<ModArmorItem> FEATHER_CONE_BOOTS = ITEMS.register("feather_cone_boots",
+            () -> new ModArmorItem(ArmorMaterialInit.FEATHER_CONE, EquipmentSlot.FEET,
+            new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
+
+    public static final RegistryObject<ArmorItem> FEATHER_HIDE_HELMET = ITEMS.register("feather_hide_helmet",
+            () -> new ArmorItem(ArmorMaterialInit.FEATHER_HIDE, EquipmentSlot.HEAD,
+            new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
+    public static final RegistryObject<ArmorItem> FEATHER_HIDE_CHESTPLATE = ITEMS.register("feather_hide_chestplate",
+            () -> new ArmorItem(ArmorMaterialInit.FEATHER_HIDE, EquipmentSlot.CHEST,
+            new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
+    public static final RegistryObject<ArmorItem> FEATHER_HIDE_LEGGINGS = ITEMS.register("feather_hide_leggings",
+            () -> new ArmorItem(ArmorMaterialInit.FEATHER_HIDE, EquipmentSlot.LEGS,
+            new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
+    public static final RegistryObject<ModArmorItem> FEATHER_HIDE_BOOTS = ITEMS.register("feather_hide_boots",
+            () -> new ModArmorItem(ArmorMaterialInit.FEATHER_HIDE, EquipmentSlot.FEET,
+            new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
+
+    public static final RegistryObject<ArmorItem> IRON_FEATHER_HELMET = ITEMS.register("iron_feather_helmet",
+            () -> new ArmorItem(ArmorMaterialInit.IRON_FEATHER, EquipmentSlot.HEAD,
+                    new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
+    public static final RegistryObject<ArmorItem> IRON_FEATHER_CHESTPLATE = ITEMS.register("iron_feather_chestplate",
+            () -> new ArmorItem(ArmorMaterialInit.IRON_FEATHER, EquipmentSlot.CHEST,
+                    new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
+    public static final RegistryObject<ArmorItem> IRON_FEATHER_LEGGINGS = ITEMS.register("iron_feather_leggings",
+            () -> new ArmorItem(ArmorMaterialInit.IRON_FEATHER, EquipmentSlot.LEGS,
+                    new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
+    public static final RegistryObject<ModArmorItem> IRON_FEATHER_BOOTS = ITEMS.register("iron_feather_boots",
+            () -> new ModArmorItem(ArmorMaterialInit.IRON_FEATHER, EquipmentSlot.FEET,
+                    new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
 
     //BLOCK ITEMS
     public static final RegistryObject<BlockItem> BLACK_SMOOTH_FEATHER_BLOCK_ITEM = ITEMS.register
@@ -136,7 +168,7 @@ public final class ItemInit {
     //FOODS
     public static final RegistryObject<Item> COOKED_HEARTY_CHICKEN = ITEMS.register("cooked_hearty_chicken",
             () -> new Item(new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)
-            .food(new FoodProperties.Builder().nutrition(8).saturationMod(1.2f).alwaysEat().meat()
+            .food(new FoodProperties.Builder().nutrition(8).saturationMod(1.2f).meat()
                 .effect(() -> new MobEffectInstance(MobEffects.HEAL, 0, 2), 1.0f)
                 .build())));
     public static final RegistryObject<Item> GOLDEN_COOKED_HEARTY_CHICKEN = ITEMS.register("golden_cooked_hearty_chicken",
@@ -148,7 +180,7 @@ public final class ItemInit {
                 .build())));
     public static final RegistryObject<Item> HEARTY_CHICKEN = ITEMS.register("hearty_chicken",
             () -> new Item(new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)
-            .food(new FoodProperties.Builder().nutrition(3).saturationMod(0.3f).alwaysEat().meat()
+            .food(new FoodProperties.Builder().nutrition(3).saturationMod(0.3f).meat()
                 .effect(() -> new MobEffectInstance(MobEffects.HEAL, 0, 1), 1.0f)
                 .effect(() -> new MobEffectInstance(MobEffects.POISON, 60, 1), 0.1f)
                 .build())));
@@ -156,11 +188,23 @@ public final class ItemInit {
     //NORMAL ITEMS
     public static final RegistryObject<Item> BROKEN_EGGSHELL_ITEM = ITEMS.register("broken_eggshell", () ->
             new Item(new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
+    public static final RegistryObject<Item> FEATHER_CONE_ITEM = ITEMS.register("feather_cone", () ->
+            new Item(new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
+    public static final RegistryObject<Item> FEATHER_HIDE_ITEM = ITEMS.register("feather_hide", () ->
+            new Item(new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
+    public static final RegistryObject<Item> FIRE_FEATHER = ITEMS.register("fire_feather", () ->
+            new Item(new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
+    public static final RegistryObject<Item> IRON_FEATHER_ITEM = ITEMS.register("iron_feather", () ->
+            new Item(new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
+    public static final RegistryObject<Item> IRON_FEATHER_INGOT_ITEM = ITEMS.register("iron_feather_ingot", () ->
+            new Item(new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
+    public static final RegistryObject<Item> IRON_FEATHER_NUGGET_ITEM = ITEMS.register("iron_feather_nugget", () ->
+            new Item(new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
     public static final RegistryObject<Item> PORTAL_EGG_ITEM = ITEMS.register("portal_egg", () ->
             new Item(new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
     public static final RegistryObject<Item> RED_EGG_ITEM = ITEMS.register("red_egg", () ->
             new Item(new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
-    public static final RegistryObject<Item> STEEL_SCRAP = ITEMS.register("steel_scrap", () ->
+    public static final RegistryObject<Item> STEEL_SCRAP_ITEM = ITEMS.register("steel_scrap", () ->
             new Item(new Item.Properties().tab(DimensionalAdventures.RUINED_TECHNOLOGY_TAB)));
 
     //SEED ITEMS
@@ -169,6 +213,9 @@ public final class ItemInit {
             new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
 
     //SPAWN EGG ITEMS
+    public static final RegistryObject<ForgeSpawnEggItem> CHIKO_SPAWN_EGG = ITEMS.register(
+            "chiko_spawn_egg", () -> new ForgeSpawnEggItem(EntityInit.CHIKO, 0xEDEDED,
+            0xFF0000, new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB).stacksTo(16)));
     public static final RegistryObject<ForgeSpawnEggItem> FEATHERER_SPAWN_EGG = ITEMS.register(
             "featherer_spawn_egg", () -> new ForgeSpawnEggItem(EntityInit.FEATHERER, 0xFFD4F8,
             0xFCFCF4, new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB).stacksTo(16)));
@@ -182,21 +229,54 @@ public final class ItemInit {
     public static final RegistryObject<Item> OIL_BUCKET = ITEMS.register("oil_bucket",
             () -> new BucketItem(ModFluids.OIL_FLUID,
             new Item.Properties().stacksTo(1).tab(DimensionalAdventures.SERAMANIA_TAB)));
+
     public static final RegistryObject<AxeItem> FEATHER_AXE = ITEMS.register("feather_axe",
-            () -> new AxeItem(ToolMaterialInit.FEATHER, 0, 1.0f,
+            () -> new AxeItem(ToolMaterialInit.FEATHER, 5.0F, -3.0F,
             new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
     public static final RegistryObject<HoeItem> FEATHER_HOE = ITEMS.register("feather_hoe",
-            () -> new HoeItem(ToolMaterialInit.FEATHER, 0, 1.0f,
+            () -> new HoeItem(ToolMaterialInit.FEATHER, 0, -3.0f,
             new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
     public static final RegistryObject<PickaxeItem> FEATHER_PICKAXE = ITEMS.register("feather_pickaxe",
-            () -> new PickaxeItem(ToolMaterialInit.FEATHER, 0, 1.0f,
+            () -> new PickaxeItem(ToolMaterialInit.FEATHER, 1, -2.8f,
             new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
     public static final RegistryObject<ShovelItem> FEATHER_SHOVEL = ITEMS.register("feather_shovel",
-            () -> new ShovelItem(ToolMaterialInit.FEATHER, 0, 1.0f,
+            () -> new ShovelItem(ToolMaterialInit.FEATHER, 1.5f, -3.0f,
             new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
     public static final RegistryObject<SwordItem> FEATHER_SWORD = ITEMS.register("feather_sword",
-            () -> new SwordItem(ToolMaterialInit.FEATHER, 0, 1.0f,
+            () -> new SwordItem(ToolMaterialInit.FEATHER, 3, -2.4f,
             new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
+
+    public static final RegistryObject<AxeItem> FEATHER_CONE_AXE = ITEMS.register("feather_cone_axe",
+            () -> new AxeItem(ToolMaterialInit.FEATHER_CONE, 6.0F, -3.1F,
+                    new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
+    public static final RegistryObject<HoeItem> FEATHER_CONE_HOE = ITEMS.register("feather_cone_hoe",
+            () -> new HoeItem(ToolMaterialInit.FEATHER_CONE, 0, -3.0f,
+                    new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
+    public static final RegistryObject<PickaxeItem> FEATHER_CONE_PICKAXE = ITEMS.register("feather_cone_pickaxe",
+            () -> new PickaxeItem(ToolMaterialInit.FEATHER_CONE, 1, -2.8f,
+                    new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
+    public static final RegistryObject<ShovelItem> FEATHER_CONE_SHOVEL = ITEMS.register("feather_cone_shovel",
+            () -> new ShovelItem(ToolMaterialInit.FEATHER_CONE, 1.5f, -3.0f,
+                    new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
+    public static final RegistryObject<SwordItem> FEATHER_CONE_SWORD = ITEMS.register("feather_cone_sword",
+            () -> new SwordItem(ToolMaterialInit.FEATHER_CONE, 3, -2.4f,
+                    new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
+
+    public static final RegistryObject<AxeItem> IRON_FEATHER_AXE = ITEMS.register("iron_feather_axe",
+            () -> new AxeItem(ToolMaterialInit.IRON_FEATHER, 5.0F, -3.0F,
+                    new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
+    public static final RegistryObject<HoeItem> IRON_FEATHER_HOE = ITEMS.register("iron_feather_hoe",
+            () -> new HoeItem(ToolMaterialInit.IRON_FEATHER, 0, -3.0f,
+                    new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
+    public static final RegistryObject<PickaxeItem> IRON_FEATHER_PICKAXE = ITEMS.register("iron_feather_pickaxe",
+            () -> new PickaxeItem(ToolMaterialInit.IRON_FEATHER, 1, -2.8f,
+                    new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
+    public static final RegistryObject<ShovelItem> IRON_FEATHER_SHOVEL = ITEMS.register("iron_feather_shovel",
+            () -> new ShovelItem(ToolMaterialInit.IRON_FEATHER, 1.5f, -3.0f,
+                    new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
+    public static final RegistryObject<SwordItem> IRON_FEATHER_SWORD = ITEMS.register("iron_feather_sword",
+            () -> new SwordItem(ToolMaterialInit.IRON_FEATHER, 3, -2.4f,
+                    new Item.Properties().tab(DimensionalAdventures.SERAMANIA_TAB)));
 
     //STONE BLOCK ITEMS
     public static final RegistryObject<BlockItem> COBBLED_SERASTONE_BLOCK_ITEM = ITEMS.register

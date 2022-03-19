@@ -14,10 +14,7 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.entity.AgeableMob;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.Shearable;
+import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
@@ -28,6 +25,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraftforge.common.IForgeShearable;
 
 import javax.annotation.Nonnull;
@@ -35,6 +33,7 @@ import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Random;
 
 public class Featherer extends Animal implements Shearable, IForgeShearable {
 
@@ -48,6 +47,15 @@ public class Featherer extends Animal implements Shearable, IForgeShearable {
 
     public Featherer(EntityType<? extends Animal> entityType, Level level) {
         super(entityType, level);
+    }
+
+    public static boolean canSpawn(EntityType<Featherer> entity, LevelAccessor levelAccess, MobSpawnType spawnType,
+                                   BlockPos pos, Random random) {
+        return checkAnimalSpawnRules(entity, levelAccess, spawnType, pos, random);// && pos.getY() > 50;
+    }
+
+    public boolean causeFallDamage(float p_148875_, float p_148876_, DamageSource damageSource) {
+        return false;
     }
 
     @Override
@@ -66,13 +74,13 @@ public class Featherer extends Animal implements Shearable, IForgeShearable {
         return Mob.createMobAttributes().add(net.minecraft.world.entity.ai.attributes.Attributes.MAX_HEALTH, 4.0D).add(Attributes.MOVEMENT_SPEED, 0.27D);
     }
 
-    public InteractionResult mobInteract(Player p_29853_, InteractionHand p_29854_) {
-        p_29853_.getItemInHand(p_29854_);
-        return super.mobInteract(p_29853_, p_29854_);
+    public InteractionResult mobInteract(Player p_29853_, InteractionHand interactionHand) {
+        p_29853_.getItemInHand(interactionHand);
+        return super.mobInteract(p_29853_, interactionHand);
     }
 
-    public void shear(SoundSource p_29819_) {
-        this.level.playSound((Player)null, this, SoundEvents.SHEEP_SHEAR, p_29819_, 1.0F, 1.0F);
+    public void shear(SoundSource soundSource) {
+        this.level.playSound((Player)null, this, SoundEvents.SHEEP_SHEAR, soundSource, 1.0F, 1.0F);
         this.setSheared(true);
         int i = 1 + this.random.nextInt(3);
 
