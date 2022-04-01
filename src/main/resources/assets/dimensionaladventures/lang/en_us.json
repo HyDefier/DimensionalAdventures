@@ -62,7 +62,7 @@
   "item.dimensionaladventures.feather_wood_sign": "Featherwood Sign",
 
 
-
+  "itemGroup.dimensionaladventures_alpha_content": "Alpha Content",
   "itemGroup.dimensionaladventures_seramania": "Seramania",
   "itemGroup.dimensionaladventures_ruined_technology": "Ruined Technology",
 
@@ -93,12 +93,72 @@
   "item.dimensionaladventures.broken_eggshell": "Eggshell Bits",
   "item.dimensionaladventures.feather_cone": "Feathercone",
   "item.dimensionaladventures.feather_hide": "Featherhide",
+  "item.dimensionaladventures.fire_feather": "Firefeather",
   "item.dimensionaladventures.iron_feather": "Ironfeather",
   "item.dimensionaladventures.iron_feather_ingot": "Ironfeather Ingot",
   "item.dimensionaladventures.iron_feather_nugget": "Ironfeather Nugget",
   "item.dimensionaladventures.portal_egg": "Portal Egg",
   "item.dimensionaladventures.red_egg": "Red Egg",
   "item.dimensionaladventures.steel_scrap": "Steel Scrap",
+
+
+
+  "item.dimensionaladventures.all_for_them_a_record": "Alpha Music Disc",
+  "item.dimensionaladventures.all_for_them_a_record.desc": "HyDefy - All for Them (Alpha)",
+
+  "item.dimensionaladventures.cold_feet_a_record": "Alpha Music Disc",
+  "item.dimensionaladventures.cold_feet_a_record.desc": "HyDefy - Cold Feet (Alpha)",
+
+  "item.dimensionaladventures.cold_feet_a_s_record": "Alpha Music Disc",
+  "item.dimensionaladventures.cold_feet_a_s_record.desc": "HyDefy - Cold Feet (Alpha) [Slow Edition]",
+
+  "item.dimensionaladventures.final_breath_a_record": "Alpha Music Disc",
+  "item.dimensionaladventures.final_breath_a_record.desc": "HyDefy - Final Breath (Alpha)",
+
+  "item.dimensionaladventures.final_breath_a_s_record": "Alpha Music Disc",
+  "item.dimensionaladventures.final_breath_a_s_record.desc": "HyDefy - Final Breath (Alpha) [Slow Edition]",
+
+  "item.dimensionaladventures.leaving_the_nest_a_record": "Alpha Music Disc",
+  "item.dimensionaladventures.leaving_the_nest_a_record.desc": "HyDefy - Leaving the Nest (Alpha)",
+
+  "item.dimensionaladventures.leaving_the_nest_a_s_record": "Alpha Music Disc",
+  "item.dimensionaladventures.leaving_the_nest_a_s_record.desc": "HyDefy - Leaving the Nest (Alpha) [Slow Edition]",
+
+  "item.dimensionaladventures.leaving_the_nest_a_t_record": "Alpha Music Disc",
+  "item.dimensionaladventures.leaving_the_nest_a_t_record.desc": "HyDefy - Leaving the Nest (Alpha) [Trippy Edition]",
+
+  "item.dimensionaladventures.morning_trot_a_record": "Alpha Music Disc",
+  "item.dimensionaladventures.morning_trot_a_record.desc": "HyDefy - Morning Trot (Alpha)",
+
+  "item.dimensionaladventures.outside_the_shell_a_record": "Alpha Music Disc",
+  "item.dimensionaladventures.outside_the_shell_a_record.desc": "HyDefy - Outside the Shell (Alpha)",
+
+  "item.dimensionaladventures.outside_the_shell_a_s_record": "Alpha Music Disc",
+  "item.dimensionaladventures.outside_the_shell_a_s_record.desc": "HyDefy - Outside the Shell (Alpha) [Slow Edition]",
+
+  "item.dimensionaladventures.pick_up_straw_a_record": "Alpha Music Disc",
+  "item.dimensionaladventures.pick_up_straw_a_record.desc": "HyDefy - Pick Up Straw (Alpha)",
+
+  "item.dimensionaladventures.thats_my_straw_a_record": "Alpha Music Disc",
+  "item.dimensionaladventures.thats_my_straw_a_record.desc": "HyDefy - That's My Straw! (Alpha)",
+
+  "item.dimensionaladventures.the_simple_life_a_record": "Alpha Music Disc",
+  "item.dimensionaladventures.the_simple_life_a_record.desc": "HyDefy - The Simple Life (Alpha)",
+
+  "item.dimensionaladventures.three_little_eggs_a_record": "Alpha Music Disc",
+  "item.dimensionaladventures.three_little_eggs_a_record.desc": "HyDefy - Three Little Eggs (Alpha)",
+
+  "item.dimensionaladventures.three_little_eggs_a_s_record": "Alpha Music Disc",
+  "item.dimensionaladventures.three_little_eggs_a_s_record.desc": "HyDefy - Three Little Eggs (Alpha) [Slow Edition]",
+
+  "item.dimensionaladventures.we_are_the_storm_a_record": "Alpha Music Disc",
+  "item.dimensionaladventures.we_are_the_storm_a_record.desc": "HyDefy - We Are the Storm (Alpha)",
+
+  "item.dimensionaladventures.weather_the_storm_a_record": "Alpha Music Disc",
+  "item.dimensionaladventures.weather_the_storm_a_record.desc": "HyDefy - Weather the Storm (Alpha)",
+
+  "item.dimensionaladventures.what_is_straw_a_record": "Alpha Music Disc",
+  "item.dimensionaladventures.what_is_straw_a_record.desc": "HyDefy - What is Straw? (Alpha)",
 
 
 
@@ -167,7 +227,6 @@
   "block.dimensionaladventures.ashbark_button": "Ashbark Button",
   "block.dimensionaladventures.ashbark_sign": "Ashbark Sign",
   "block.dimensionaladventures.ashbark_wall_sign": "Ashbark Wall Sign",
-
   "block.dimensionaladventures.ashbark_panel": "Ashbark Panel",
 
   "block.dimensionaladventures.red_ashbark_leaves": "Red Ashbark Leaves",
@@ -191,6 +250,5 @@
   "block.dimensionaladventures.feather_wood_button": "Featherwood Button",
   "block.dimensionaladventures.feather_wood_sign": "Featherwood Sign",
   "block.dimensionaladventures.feather_wood_wall_sign": "Featherwood Wall Sign",
-
   "block.dimensionaladventures.feather_wood_panel": "Featherwood Panel"
 }

@@ -9,11 +9,11 @@ modId="dimensionaladventures"
 # see the associated build.gradle script for how to populate this completely automatically during a build
 version="${file.jarVersion}"
 
-displayName="Dimensional Adventures"
+displayName="Dimensional Adventures (Alpha)"
 #updateJSONURL="https://change.me.example.invalid/updates.json"
 #displayURL="https://change.me.to.your.mods.homepage.example.invalid/"
-logoFile="dimensionaladventures.png" #optional
-credits="TurtyWurty's introduction guide, Loot table generator found at: https://misode.github.io/loot-table/"
+logoFile="icon.png" #optional
+credits="Kaupenjoe et al, TurtyWurty et al, https://misode.github.io/loot-table/"
 authors="HyDefy" #optional
 description='''
 This mod adds multiple well-developed dimensions to Minecraft.

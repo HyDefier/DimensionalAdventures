@@ -1,14 +1,10 @@
 package com.hydefy.dimensionaladventures.core.world.biome;
 
 import com.hydefy.dimensionaladventures.DimensionalAdventures;
-import com.hydefy.dimensionaladventures.core.init.ItemInit;
-import com.hydefy.dimensionaladventures.core.world.features.ModDefaultFeatures;
+import com.hydefy.dimensionaladventures.core.world.features.ModFeatures;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.data.worldgen.BiomeDefaultFeatures;
-import net.minecraft.data.worldgen.placement.MiscOverworldPlacements;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.biome.*;
-import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -23,10 +19,8 @@ public class SeramaniaBiomes {
 
     private static Biome createFadedFields() {
         MobSpawnSettings.Builder spawnSettings = new MobSpawnSettings.Builder();
-        BiomeDefaultFeatures.endSpawns(spawnSettings);
-//        BiomeDefaultFeatures.caveSpawns(spawnSettings);
-
-        ModDefaultFeatures.illagerSpawns(spawnSettings);
+        ModFeatures.endSpawns(spawnSettings);
+        ModFeatures.illagerSpawns(spawnSettings);
 
         BiomeGenerationSettings.Builder generationSettings = new BiomeGenerationSettings.Builder();
         BiomeDefaultFeatures.addDefaultUndergroundVariety(generationSettings);
@@ -50,16 +44,13 @@ public class SeramaniaBiomes {
 
     private static Biome createFeatherFields() {
         MobSpawnSettings.Builder spawnSettings = new MobSpawnSettings.Builder();
-        BiomeDefaultFeatures.endSpawns(spawnSettings);
-//        BiomeDefaultFeatures.plainsSpawns(spawnSettings);
-
-        ModDefaultFeatures.illagerSpawns(spawnSettings);
+        ModFeatures.endSpawns(spawnSettings);
 
         BiomeGenerationSettings.Builder generationSettings = new BiomeGenerationSettings.Builder();
         BiomeDefaultFeatures.addDefaultUndergroundVariety(generationSettings);
         BiomeDefaultFeatures.addDefaultCarversAndLakes(generationSettings);
 
-        ModDefaultFeatures.addModFeatherwoodTrees(generationSettings);
+        ModFeatures.addModFeatherwoodTrees(generationSettings);
         BiomeDefaultFeatures.addDefaultOres(generationSettings);
         BiomeDefaultFeatures.addDefaultSoftDisks(generationSettings);
         BiomeDefaultFeatures.addDefaultSprings(generationSettings);
@@ -78,14 +69,14 @@ public class SeramaniaBiomes {
 
     private static Biome createFireFields() {
         MobSpawnSettings.Builder spawnSettings = new MobSpawnSettings.Builder();
-//        BiomeDefaultFeatures.desertSpawns(spawnSettings);
 
         BiomeGenerationSettings.Builder generationSettings = new BiomeGenerationSettings.Builder();
         BiomeDefaultFeatures.addDefaultUndergroundVariety(generationSettings);
         BiomeDefaultFeatures.addDefaultCarversAndLakes(generationSettings);
 
-        ModDefaultFeatures.addModFeatherwoodTrees(generationSettings);
-        ModDefaultFeatures.addModAshbarkFallTrees(generationSettings);
+        ModFeatures.addModFeatherwoodTrees(generationSettings);
+        ModFeatures.addModAshbarkFallTrees(generationSettings);
+        ModFeatures.addFloatingIslands(generationSettings);
         BiomeDefaultFeatures.addDefaultOres(generationSettings);
         BiomeDefaultFeatures.addDefaultSoftDisks(generationSettings);
         BiomeDefaultFeatures.addDefaultSprings(generationSettings);
@@ -94,7 +85,7 @@ public class SeramaniaBiomes {
                 .specialEffects((new BiomeSpecialEffects.Builder())
                         .waterColor(0xB6CEEA).waterFogColor(0xFFBDA5)
                         .fogColor(0xFFFFA5).skyColor(0xFF8EA5).grassColorOverride(0xDB96A0)
-                        .ambientParticle(new AmbientParticleSettings(ParticleTypes.ASH, 0.118093334F))
+                        .ambientParticle(new AmbientParticleSettings(ParticleTypes.ASH, 0.01F))
                         .build()).mobSpawnSettings(spawnSettings.build())
                 .generationSettings(generationSettings.build()).build();
     }
@@ -104,15 +95,15 @@ public class SeramaniaBiomes {
 
     private static Biome createFloodedFields() {
         MobSpawnSettings.Builder spawnSettings = new MobSpawnSettings.Builder();
-        BiomeDefaultFeatures.endSpawns(spawnSettings);
-        ModDefaultFeatures.illagerSpawns(spawnSettings);
-        ModDefaultFeatures.drownedSpawns(spawnSettings);
+        ModFeatures.endSpawns(spawnSettings);
+        ModFeatures.waterSpawns(spawnSettings);
 
         BiomeGenerationSettings.Builder generationSettings = new BiomeGenerationSettings.Builder();
         BiomeDefaultFeatures.addDefaultUndergroundVariety(generationSettings);
         BiomeDefaultFeatures.addDefaultCarversAndLakes(generationSettings);
+//        BiomeDefaultFeatures.addSwampClayDisk(generationSettings);
 
-        ModDefaultFeatures.addModFeatherwoodTrees(generationSettings);
+        ModFeatures.addModFeatherwoodTrees(generationSettings);
         BiomeDefaultFeatures.addDefaultOres(generationSettings);
         BiomeDefaultFeatures.addDefaultSoftDisks(generationSettings);
         BiomeDefaultFeatures.addDefaultSprings(generationSettings);
@@ -130,11 +121,8 @@ public class SeramaniaBiomes {
 
     private static Biome createFrozenFields() {
         MobSpawnSettings.Builder spawnSettings = new MobSpawnSettings.Builder();
-        BiomeDefaultFeatures.endSpawns(spawnSettings);
+        ModFeatures.endSpawns(spawnSettings);
         BiomeDefaultFeatures.snowySpawns(spawnSettings);
-        ModDefaultFeatures.illagerSpawns(spawnSettings);
-
-
 
         BiomeGenerationSettings.Builder generationSettings = new BiomeGenerationSettings.Builder();
         BiomeDefaultFeatures.addDefaultUndergroundVariety(generationSettings);
@@ -146,7 +134,7 @@ public class SeramaniaBiomes {
         BiomeDefaultFeatures.addSurfaceFreezing(generationSettings);
 
         BiomeDefaultFeatures.addTaigaTrees(generationSettings);
-        ModDefaultFeatures.addModFeatherwoodTrees(generationSettings);
+        ModFeatures.addModFeatherwoodTrees(generationSettings);
 
         BiomeDefaultFeatures.addDefaultOres(generationSettings);
 
@@ -157,7 +145,7 @@ public class SeramaniaBiomes {
                 .specialEffects((new BiomeSpecialEffects.Builder())
                         .waterColor(0x36D5FC).waterFogColor(0xFFFFFF)
                         .fogColor(0x60FDF1).skyColor(0xB5E7F4).grassColorOverride(0x31FFFF)
-                        //.ambientParticle(new AmbientParticleSettings(ParticleTypes.FIREWORK, 0.118093334F))
+                        .ambientParticle(new AmbientParticleSettings(ParticleTypes.CLOUD, 0.01F))
                         .build()).mobSpawnSettings(spawnSettings.build())
                 .generationSettings(generationSettings.build()).build();
     }

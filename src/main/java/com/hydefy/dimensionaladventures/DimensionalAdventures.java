@@ -69,13 +69,21 @@ public class DimensionalAdventures
         }
     };
 
+    public static final CreativeModeTab ALPHA_CONTENT_TAB = new CreativeModeTab(MODID + "_alpha_content") {
+        @Override @NotNull
+        public ItemStack makeIcon() {
+            return ItemInit.ALL_FOR_THEM_A_RECORD.get().getDefaultInstance();
+        }
+    };
+
     public DimensionalAdventures() {
         var bus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        SoundInit               .SOUNDS                  .register(bus);
-        BlockInit               .BLOCKS                  .register(bus);
-        ItemInit                .ITEMS                   .register(bus);
-        EntityInit              .ENTITIES                .register(bus);
+        SoundInit               .SOUNDS                 .register(bus);
+        BlockInit               .BLOCKS                 .register(bus);
+        ItemInit                .ITEMS                  .register(bus);
+        EntityInit              .ENTITIES               .register(bus);
+        FeatureInit             .FEATURES               .register(bus);
 
         WoodType.register(ModWoodType.ASHBARK);
         WoodType.register(ModWoodType.FEATHER);

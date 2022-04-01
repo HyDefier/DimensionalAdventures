@@ -187,8 +187,8 @@ public final class BlockInit {
     public static final RegistryObject<Block> ASHBARK_LEAVES = BLOCKS.register("ashbark_leaves",
             () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
     public static final RegistryObject<Block> ASHBARK_SAPLING = BLOCKS.register("ashbark_sapling",
-            () -> new SaplingBlock(new AshbarkTreeGrower(), BlockBehaviour.Properties.copy(Blocks.CRIMSON_FUNGUS)
-            .sound(SoundType.HARD_CROP).lightLevel((p_50872_) -> 8)));
+            () -> new SaplingBlock(new AshbarkTreeGrower(), BlockBehaviour.Properties.copy(Blocks.SPRUCE_SAPLING)
+            .sound(SoundType.BAMBOO_SAPLING).lightLevel((p_50872_) -> 8)));
     public static final RegistryObject<Block> POTTED_ASHBARK_SAPLING = BLOCKS.register("potted_ashbark_sapling",
             () -> new FlowerPotBlock(null, BlockInit.ASHBARK_SAPLING, BlockBehaviour.Properties.copy
             (Blocks.POTTED_DANDELION).noOcclusion().lightLevel((p_50872_) -> 8)));

@@ -8,7 +8,6 @@
     "dimensionaladventures:stripped_ashbark_log",
     "dimensionaladventures:stripped_ashbark_wood",
     "dimensionaladventures:ashbark_planks",
-
     "dimensionaladventures:ashbark_door",
     "dimensionaladventures:ashbark_slab",
     "dimensionaladventures:ashbark_pressure_plate",
@@ -19,13 +18,13 @@
     "dimensionaladventures:ashbark_button",
     "dimensionaladventures:ashbark_sign",
     "dimensionaladventures:ashbark_wall_sign",
+    "dimensionaladventures:ashbark_panel",
 
     "dimensionaladventures:feather_wood_log",
     "dimensionaladventures:feather_wood",
     "dimensionaladventures:stripped_feather_wood_log",
     "dimensionaladventures:stripped_feather_wood",
     "dimensionaladventures:feather_wood_planks",
-
     "dimensionaladventures:feather_wood_door",
     "dimensionaladventures:feather_wood_slab",
     "dimensionaladventures:feather_wood_pressure_plate",
@@ -35,6 +34,7 @@
     "dimensionaladventures:feather_wood_stairs",
     "dimensionaladventures:feather_wood_button",
     "dimensionaladventures:feather_wood_sign",
-    "dimensionaladventures:feather_wood_wall_sign"
+    "dimensionaladventures:feather_wood_wall_sign",
+    "dimensionaladventures:feather_wood_panel"
   ]
 }

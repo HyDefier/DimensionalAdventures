@@ -6,15 +6,170 @@
       "dimensionaladventures:featherer_ambient3"
     ]
   },
-  "entity.featherer.death"  : {
+  "entity.featherer.death": {
     "sounds":[
       "dimensionaladventures:featherer_death1"
     ]
   },
-  "entity.featherer.hurt"   : {
+  "entity.featherer.hurt": {
     "sounds":[
       "dimensionaladventures:featherer_hurt1",
       "dimensionaladventures:featherer_hurt2"
+    ]
+  },
+
+
+
+  "all_for_them_alpha": {
+    "sounds":[
+      {
+        "name": "dimensionaladventures:seramania/music/all_for_them_alpha",
+        "stream": true
+      }
+    ]
+  },
+  "cold_feet_alpha": {
+    "sounds":[
+      {
+        "name": "dimensionaladventures:seramania/music/cold_feet_alpha",
+        "stream": true
+      }
+    ]
+  },
+  "cold_feet_alpha_slow": {
+    "sounds":[
+      {
+        "name": "dimensionaladventures:seramania/music/cold_feet_alpha_slow",
+        "stream": true
+      }
+    ]
+  },
+  "final_breath_alpha": {
+    "sounds":[
+      {
+        "name": "dimensionaladventures:seramania/music/final_breath_alpha",
+        "stream": true
+      }
+    ]
+  },
+  "final_breath_alpha_slow": {
+    "sounds":[
+      {
+        "name": "dimensionaladventures:seramania/music/final_breath_alpha_slow",
+        "stream": true
+      }
+    ]
+  },
+  "leaving_the_nest_alpha": {
+    "sounds":[
+      {
+        "name": "dimensionaladventures:seramania/music/leaving_the_nest_alpha",
+        "stream": true
+      }
+    ]
+  },
+  "leaving_the_nest_alpha_slow": {
+    "sounds":[
+      {
+        "name": "dimensionaladventures:seramania/music/leaving_the_nest_alpha_slow",
+        "stream": true
+      }
+    ]
+  },
+  "leaving_the_nest_alpha_trippy": {
+    "sounds":[
+      {
+        "name": "dimensionaladventures:seramania/music/leaving_the_nest_alpha_trippy",
+        "stream": true
+      }
+    ]
+  },
+  "morning_trot_alpha": {
+    "sounds":[
+      {
+        "name": "dimensionaladventures:seramania/music/morning_trot_alpha",
+        "stream": true
+      }
+    ]
+  },
+  "outside_the_shell_alpha": {
+    "sounds":[
+      {
+        "name": "dimensionaladventures:seramania/music/outside_the_shell_alpha",
+        "stream": true
+      }
+    ]
+  },
+  "outside_the_shell_alpha_slow": {
+    "sounds":[
+      {
+        "name": "dimensionaladventures:seramania/music/outside_the_shell_alpha_slow",
+        "stream": true
+      }
+    ]
+  },
+  "pick_up_straw_alpha": {
+    "sounds":[
+      {
+        "name": "dimensionaladventures:seramania/music/pick_up_straw_alpha",
+        "stream": true
+      }
+    ]
+  },
+  "thats_my_straw_alpha": {
+    "sounds":[
+      {
+        "name": "dimensionaladventures:seramania/music/thats_my_straw_alpha",
+        "stream": true
+      }
+    ]
+  },
+  "the_simple_life_alpha": {
+    "sounds":[
+      {
+        "name": "dimensionaladventures:seramania/music/the_simple_life_alpha",
+        "stream": true
+      }
+    ]
+  },
+  "three_little_eggs_alpha": {
+    "sounds":[
+      {
+        "name": "dimensionaladventures:seramania/music/three_little_eggs_alpha",
+        "stream": true
+      }
+    ]
+  },
+  "three_little_eggs_alpha_slow": {
+    "sounds":[
+      {
+        "name": "dimensionaladventures:seramania/music/three_little_eggs_alpha_slow",
+        "stream": true
+      }
+    ]
+  },
+  "we_are_the_storm_alpha": {
+    "sounds":[
+      {
+        "name": "dimensionaladventures:seramania/music/we_are_the_storm_alpha",
+        "stream": true
+      }
+    ]
+  },
+  "weather_the_storm_alpha": {
+  "sounds":[
+      {
+        "name": "dimensionaladventures:seramania/music/weather_the_storm_alpha",
+        "stream": true
+      }
+    ]
+  },
+  "what_is_straw_alpha": {
+    "sounds":[
+      {
+        "name": "dimensionaladventures:seramania/music/what_is_straw_alpha",
+        "stream": true
+      }
     ]
   }
 }

@@ -5,6 +5,7 @@ import java.util.function.Supplier;
 
 import com.hydefy.dimensionaladventures.DimensionalAdventures;
 import com.hydefy.dimensionaladventures.core.init.EntityInit;
+import com.hydefy.dimensionaladventures.core.init.ItemInit;
 import com.hydefy.dimensionaladventures.core.world.OreGeneration;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.MobCategory;
@@ -29,7 +30,11 @@ public class CommonForgeEvents {
                     new SpawnerData(EntityInit.PORTAL_CHICKEN.get(), 50, 1, 2));
         }
 
-        if (event.getName().equals(new ResourceLocation("dimensionaladventures:feather_fields"))) {
+        if (event.getName().equals(new ResourceLocation("dimensionaladventures:feather_fields"))
+            ||event.getName().equals(new ResourceLocation("dimensionaladventures:fire_fields"))
+            ||event.getName().equals(new ResourceLocation("dimensionaladventures:flooded_fields"))
+            ||event.getName().equals(new ResourceLocation("dimensionaladventures:frozen_fields"))
+            ||event.getName().equals(new ResourceLocation("dimensionaladventures:faded_fields"))) {
             event.getSpawns().addSpawn(MobCategory.CREATURE,
                     new SpawnerData(EntityInit.CHIKO.get(), 5000, 8, 32));
         }
@@ -44,10 +49,10 @@ public class CommonForgeEvents {
         }
     }
 
-//    @SubscribeEvent
-//    public static void burnTime(FurnaceFuelBurnTimeEvent event) {
-//        if (event.getItemStack().getItem() == Items.BREAD) {
-//            event.setBurnTime(500);
-//        }
-//    }
+    @SubscribeEvent
+    public static void burnTime(FurnaceFuelBurnTimeEvent event) {
+        if (event.getItemStack().getItem() == ItemInit.FIRE_FEATHER.get()) {
+            event.setBurnTime(469);
+        }
+    }
 }

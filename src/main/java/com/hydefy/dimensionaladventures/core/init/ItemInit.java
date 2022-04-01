@@ -207,6 +207,65 @@ public final class ItemInit {
     public static final RegistryObject<Item> STEEL_SCRAP_ITEM = ITEMS.register("steel_scrap", () ->
             new Item(new Item.Properties().tab(DimensionalAdventures.RUINED_TECHNOLOGY_TAB)));
 
+    //RECORD ITEMS
+    public static final RegistryObject<Item> ALL_FOR_THEM_A_RECORD = ITEMS.register("all_for_them_a_record", () ->
+            new RecordItem(0, SoundInit.ALL_FOR_THEM_A, new Item.Properties().tab
+                    (DimensionalAdventures.ALPHA_CONTENT_TAB).stacksTo(1)));
+    public static final RegistryObject<Item> COLD_FEET_A_RECORD = ITEMS.register("cold_feet_a_record", () ->
+            new RecordItem(1, SoundInit.COLD_FEET_A, new Item.Properties().tab
+                    (DimensionalAdventures.ALPHA_CONTENT_TAB).stacksTo(1)));
+    public static final RegistryObject<Item> COLD_FEET_A_S_RECORD = ITEMS.register("cold_feet_a_s_record", () ->
+            new RecordItem(1, SoundInit.COLD_FEET_A_S, new Item.Properties().tab
+                    (DimensionalAdventures.ALPHA_CONTENT_TAB).stacksTo(1)));
+    public static final RegistryObject<Item> FINAL_BREATH_A_RECORD = ITEMS.register("final_breath_a_record", () ->
+            new RecordItem(2, SoundInit.FINAL_BREATH_A, new Item.Properties().tab
+                    (DimensionalAdventures.ALPHA_CONTENT_TAB).stacksTo(1)));
+    public static final RegistryObject<Item> FINAL_BREATH_A_S_RECORD = ITEMS.register("final_breath_a_s_record", () ->
+            new RecordItem(2, SoundInit.FINAL_BREATH_A_S, new Item.Properties().tab
+                    (DimensionalAdventures.ALPHA_CONTENT_TAB).stacksTo(1)));
+    public static final RegistryObject<Item> LEAVING_THE_NEST_A_RECORD = ITEMS.register("leaving_the_nest_a_record", () ->
+            new RecordItem(3, SoundInit.LEAVING_THE_NEST_A, new Item.Properties().tab
+                    (DimensionalAdventures.ALPHA_CONTENT_TAB).stacksTo(1)));
+    public static final RegistryObject<Item> LEAVING_THE_NEST_A_S_RECORD = ITEMS.register("leaving_the_nest_a_s_record", () ->
+            new RecordItem(3, SoundInit.LEAVING_THE_NEST_A_S, new Item.Properties().tab
+                    (DimensionalAdventures.ALPHA_CONTENT_TAB).stacksTo(1)));
+    public static final RegistryObject<Item> LEAVING_THE_NEST_A_T_RECORD = ITEMS.register("leaving_the_nest_a_t_record", () ->
+            new RecordItem(4, SoundInit.LEAVING_THE_NEST_A_T, new Item.Properties().tab
+                    (DimensionalAdventures.ALPHA_CONTENT_TAB).stacksTo(1)));
+    public static final RegistryObject<Item> MORNING_TROT_A_RECORD = ITEMS.register("morning_trot_a_record", () ->
+            new RecordItem(5, SoundInit.MORNING_TROT_A, new Item.Properties().tab
+                    (DimensionalAdventures.ALPHA_CONTENT_TAB).stacksTo(1)));
+    public static final RegistryObject<Item> OUTSIDE_THE_SHELL_A_RECORD = ITEMS.register("outside_the_shell_a_record", () ->
+            new RecordItem(6, SoundInit.OUTSIDE_THE_SHELL_A, new Item.Properties().tab
+                    (DimensionalAdventures.ALPHA_CONTENT_TAB).stacksTo(1)));
+    public static final RegistryObject<Item> OUTSIDE_THE_SHELL_A_S_RECORD = ITEMS.register("outside_the_shell_a_s_record", () ->
+            new RecordItem(6, SoundInit.OUTSIDE_THE_SHELL_A_S, new Item.Properties().tab
+                    (DimensionalAdventures.ALPHA_CONTENT_TAB).stacksTo(1)));
+    public static final RegistryObject<Item> PICK_UP_STRAW_A_RECORD = ITEMS.register("pick_up_straw_a_record", () ->
+            new RecordItem(7, SoundInit.PICK_UP_STRAW_A, new Item.Properties().tab
+                    (DimensionalAdventures.ALPHA_CONTENT_TAB).stacksTo(1)));
+    public static final RegistryObject<Item> THATS_MY_STRAW_A_RECORD = ITEMS.register("thats_my_straw_a_record", () ->
+            new RecordItem(7, SoundInit.THATS_MY_STRAW_A, new Item.Properties().tab
+                    (DimensionalAdventures.ALPHA_CONTENT_TAB).stacksTo(1)));
+    public static final RegistryObject<Item> THE_SIMPLE_LIFE_A_RECORD = ITEMS.register("the_simple_life_a_record", () ->
+            new RecordItem(8, SoundInit.THE_SIMPLE_LIFE_A, new Item.Properties().tab
+                    (DimensionalAdventures.ALPHA_CONTENT_TAB).stacksTo(1)));
+    public static final RegistryObject<Item> THREE_LITTLE_EGGS_A_RECORD = ITEMS.register("three_little_eggs_a_record", () ->
+            new RecordItem(9, SoundInit.THREE_LITTLE_EGGS_A, new Item.Properties().tab
+                    (DimensionalAdventures.ALPHA_CONTENT_TAB).stacksTo(1)));
+    public static final RegistryObject<Item> THREE_LITTLE_EGGS_A_S_RECORD = ITEMS.register("three_little_eggs_a_s_record", () ->
+            new RecordItem(10, SoundInit.THREE_LITTLE_EGGS_A_S, new Item.Properties().tab
+                    (DimensionalAdventures.ALPHA_CONTENT_TAB).stacksTo(1)));
+    public static final RegistryObject<Item> WE_ARE_THE_STORM_A_RECORD = ITEMS.register("we_are_the_storm_a_record", () ->
+            new RecordItem(11, SoundInit.WE_ARE_THE_STORM_A, new Item.Properties().tab
+                    (DimensionalAdventures.ALPHA_CONTENT_TAB).stacksTo(1)));
+    public static final RegistryObject<Item> WEATHER_THE_STORM_A_RECORD = ITEMS.register("weather_the_storm_a_record", () ->
+            new RecordItem(11, SoundInit.WEATHER_THE_STORM_A, new Item.Properties().tab
+                    (DimensionalAdventures.ALPHA_CONTENT_TAB).stacksTo(1)));
+    public static final RegistryObject<Item> WHAT_IS_STRAW_A_RECORD = ITEMS.register("what_is_straw_a_record", () ->
+            new RecordItem(7, SoundInit.WHAT_IS_STRAW_A, new Item.Properties().tab
+                    (DimensionalAdventures.ALPHA_CONTENT_TAB).stacksTo(1)));
+
     //SEED ITEMS
     public static final RegistryObject<Item> GIZZARD_SEEDS = ITEMS.register("gizzard_seeds", () ->
             new ItemNameBlockItem(BlockInit.GIZZARD_SEED_CROP.get(),
